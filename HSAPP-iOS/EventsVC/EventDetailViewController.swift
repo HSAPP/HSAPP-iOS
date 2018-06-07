@@ -73,7 +73,6 @@ class EventDetailViewController: UIViewController {
     }
     
     func setUpNavBar() {
-        title = "Hello"
 //        navigationController?.navigationBar.prefersLargeTitles = true
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.firstLineHeadIndent = 0
