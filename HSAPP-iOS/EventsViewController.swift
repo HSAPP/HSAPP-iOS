@@ -13,6 +13,13 @@ class EventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .red
+        self.title = "Events"
+        setUpNavBar()
+        
+    }
+    
+    func setUpNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
 }
