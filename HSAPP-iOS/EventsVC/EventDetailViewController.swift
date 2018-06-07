@@ -9,9 +9,15 @@
 import UIKit
 import SnapKit
 
-class EventDetailViewController: UIViewController {
+class EventDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var event: Event?
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.isDirectionalLockEnabled = true
+        
+        return scrollView
+    }()
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -34,7 +40,7 @@ class EventDetailViewController: UIViewController {
     
     private var placeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Medium", size: 16)
+        label.font = UIFont(name: ".SFUIText-Medium", size: 18)
         return label
     }()
     
@@ -44,17 +50,35 @@ class EventDetailViewController: UIViewController {
         return imageView
     }()
     
+    private var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText", size: 14)
+        label.numberOfLines = 0
+        label.textColor = UIColor.darkGray
+        return label
+    }()
+    
     func addSubViews() {
-        [imageView, placeLabel, placeImageView, dateImageView, dateLabel].forEach { (view) in
-            self.view.addSubview(view)
+        self.view.addSubview(scrollView)
+        [imageView, placeLabel, placeImageView, dateImageView, dateLabel, descriptionLabel].forEach { (view) in
+            self.scrollView.addSubview(view)
         }
     }
     
     func setConstraints() {
-        imageView.snp.makeConstraints { (make) in
+        
+        scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.right.equalToSuperview()
             make.left.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        imageView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.right.equalToSuperview()
+            make.left.equalToSuperview()
+            make.width.equalTo(self.view.frame.width)
             make.height.equalTo(self.view.frame.width / 1.62)
         }
         
@@ -70,6 +94,26 @@ class EventDetailViewController: UIViewController {
             make.left.equalTo(dateImageView.snp.right).offset(8)
             make.right.equalToSuperview().offset(-16)
         }
+        
+        placeImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(placeLabel.snp.top).offset(2)
+            make.left.equalToSuperview().offset(16)
+            make.height.equalTo(16)
+            make.width.equalTo(16)
+        }
+        
+        placeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(dateLabel.snp.bottom).offset(16)
+            make.left.equalTo(dateLabel.snp.left)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(placeLabel.snp.bottom).offset(16)
+            make.left.equalTo(dateLabel.snp.left)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
     }
     
     func setUpNavBar() {
@@ -84,8 +128,9 @@ class EventDetailViewController: UIViewController {
         title = event.title
         dateLabel.text = event.date
         placeLabel.text = event.place
-//        descriptionLabel.text = event.description
+        descriptionLabel.text = event.description
     }
+    
     
     override func viewDidLoad() {
         
@@ -93,6 +138,7 @@ class EventDetailViewController: UIViewController {
         setUpNavBar()
         addSubViews()
         setConstraints()
+        
     }
     
 }
