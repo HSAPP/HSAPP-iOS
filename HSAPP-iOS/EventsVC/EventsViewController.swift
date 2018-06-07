@@ -34,7 +34,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func setUpNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         let p = NSMutableParagraphStyle()
-        p.firstLineHeadIndent = 24
+        p.firstLineHeadIndent = 25
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: p]
     }
     
