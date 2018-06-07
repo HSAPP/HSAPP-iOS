@@ -7,7 +7,11 @@
 		<key>HSAPP-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>2</integer>
+=======
+			<integer>0</integer>
+>>>>>>> Sunny
 		</dict>
 	</dict>
 </dict>

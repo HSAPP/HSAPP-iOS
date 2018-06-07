@@ -13,6 +13,10 @@
 		48E3B63920C8D33D0085EDE8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3B63820C8D33D0085EDE8 /* Event.swift */; };
 		48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105320C8B3BA00DFC232 /* EventsViewController.swift */; };
 		48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105820C8C1C400DFC232 /* EventCell.swift */; };
+		848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C640F20C9B8950012A287 /* ClassesViewController.swift */; };
+		848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641120C9BA0B0012A287 /* ClassCell.swift */; };
+		848C641720C9BB5C0012A287 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641620C9BB5C0012A287 /* Assignment.swift */; };
+		848C641920C9BD570012A287 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641820C9BD570012A287 /* Classroom.swift */; };
 		F6619CE9BC363CC1BBCE3989 /* Pods_HSAPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		48E3B63820C8D33D0085EDE8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		48E6105320C8B3BA00DFC232 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		48E6105820C8C1C400DFC232 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		848C640F20C9B8950012A287 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
+		848C641120C9BA0B0012A287 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		848C641620C9BB5C0012A287 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		848C641820C9BD570012A287 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
 		B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSAPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC10160B62AD6FFA04666A5B /* Pods-HSAPP-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1BD374D78CD1AFE1CB1DF8 /* Pods-HSAPP-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +83,9 @@
 				48BFE46320C8A35F00E656D7 /* AppDelegate.swift */,
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
 				48E3B63820C8D33D0085EDE8 /* Event.swift */,
+				848C641820C9BD570012A287 /* Classroom.swift */,
+				848C641620C9BB5C0012A287 /* Assignment.swift */,
+				848C641320C9BA100012A287 /* ClassesVC */,
 				48E6105720C8C17600DFC232 /* EventsVC */,
 				48BFE46A20C8A36100E656D7 /* Assets.xcassets */,
 				48BFE46F20C8A36100E656D7 /* Info.plist */,
@@ -89,6 +100,15 @@
 				48E6105820C8C1C400DFC232 /* EventCell.swift */,
 			);
 			path = EventsVC;
+			sourceTree = "<group>";
+		};
+		848C641320C9BA100012A287 /* ClassesVC */ = {
+			isa = PBXGroup;
+			children = (
+				848C640F20C9B8950012A287 /* ClassesViewController.swift */,
+				848C641120C9BA0B0012A287 /* ClassCell.swift */,
+			);
+			path = ClassesVC;
 			sourceTree = "<group>";
 		};
 		A460B84C9DE91E8D6FAFEBC2 /* Frameworks */ = {
@@ -209,11 +229,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
+				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
+				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
 				48E3B63920C8D33D0085EDE8 /* Event.swift in Sources */,
+				848C641920C9BD570012A287 /* Classroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JDYWQEVARC;
+				DEVELOPMENT_TEAM = X3T6G6B4MK;
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JDYWQEVARC;
+				DEVELOPMENT_TEAM = X3T6G6B4MK;
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
