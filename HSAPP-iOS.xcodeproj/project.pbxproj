@@ -10,7 +10,9 @@
 		48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46320C8A35F00E656D7 /* AppDelegate.swift */; };
 		48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */; };
 		48BFE46B20C8A36100E656D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BFE46A20C8A36100E656D7 /* Assets.xcassets */; };
+		48E3B63920C8D33D0085EDE8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3B63820C8D33D0085EDE8 /* Event.swift */; };
 		48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105320C8B3BA00DFC232 /* EventsViewController.swift */; };
+		48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105820C8C1C400DFC232 /* EventCell.swift */; };
 		F6619CE9BC363CC1BBCE3989 /* Pods_HSAPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,7 +22,9 @@
 		48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBarController.swift; sourceTree = "<group>"; };
 		48BFE46A20C8A36100E656D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48BFE46F20C8A36100E656D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E3B63820C8D33D0085EDE8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		48E6105320C8B3BA00DFC232 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		48E6105820C8C1C400DFC232 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSAPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC10160B62AD6FFA04666A5B /* Pods-HSAPP-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1BD374D78CD1AFE1CB1DF8 /* Pods-HSAPP-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,11 +74,21 @@
 			children = (
 				48BFE46320C8A35F00E656D7 /* AppDelegate.swift */,
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
-				48E6105320C8B3BA00DFC232 /* EventsViewController.swift */,
+				48E3B63820C8D33D0085EDE8 /* Event.swift */,
+				48E6105720C8C17600DFC232 /* EventsVC */,
 				48BFE46A20C8A36100E656D7 /* Assets.xcassets */,
 				48BFE46F20C8A36100E656D7 /* Info.plist */,
 			);
 			path = "HSAPP-iOS";
+			sourceTree = "<group>";
+		};
+		48E6105720C8C17600DFC232 /* EventsVC */ = {
+			isa = PBXGroup;
+			children = (
+				48E6105320C8B3BA00DFC232 /* EventsViewController.swift */,
+				48E6105820C8C1C400DFC232 /* EventCell.swift */,
+			);
+			path = EventsVC;
 			sourceTree = "<group>";
 		};
 		A460B84C9DE91E8D6FAFEBC2 /* Frameworks */ = {
@@ -195,9 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
+				48E3B63920C8D33D0085EDE8 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDYWQEVARC;
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDYWQEVARC;
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
