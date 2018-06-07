@@ -57,6 +57,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func setUpTableView() {
         eventsTableView.register(EventCell.self, forCellReuseIdentifier: "eventCell")
         
+        //We need to add the tableview to our view before we constrain it with snapkit
         self.view.addSubview(eventsTableView)
         
         eventsTableView.dataSource = self

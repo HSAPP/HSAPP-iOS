@@ -29,14 +29,18 @@ class InitialTabBarController: UITabBarController, UITabBarControllerDelegate {
         let eventsVC = EventsViewController()
         let navOne = UINavigationController(rootViewController: eventsVC)
         
-        let tabOneBarItem = UITabBarItem(title: "Tab 1", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let tabOneBarItem = UITabBarItem(title: "Events", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
         navOne.tabBarItem = tabOneBarItem
         
         // Create Tab two
+        let classesVC = ClassesViewController()
+        let navTwo = UINavigationController(rootViewController: classesVC)
+        
+        let tabTwoBarItem = UITabBarItem(title: "Classrooms", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        navTwo.tabBarItem = tabTwoBarItem
         
         
-        
-        self.viewControllers = [navOne]
+        self.viewControllers = [navOne, navTwo]
     }
 
 
