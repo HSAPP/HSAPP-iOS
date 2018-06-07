@@ -15,6 +15,7 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isDirectionalLockEnabled = true
+        scrollView.alwaysBounceVertical = true
         
         return scrollView
     }()
