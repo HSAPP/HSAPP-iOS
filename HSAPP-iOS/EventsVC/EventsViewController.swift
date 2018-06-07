@@ -13,8 +13,6 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     let eventsTableView = UITableView()
     
-    
-    
     let eventArray = [Event(title: "Basketball Game", date: "Monday Jan 11, 7:00 PM", place: "Encinal Gym",
                             description: "St. Joseph Men's Varsity Basketball vs Encinal Men's Basketball"),
                       Event(title: "French food event", date: "Tuesday Jan 12, 9:12 AM", place: "Room 202", description: "Try out different french foods. Don't forget to bring your own. ry out different french foods. Don't forget to bring your own. ry out different french foods. Don't forget to bring your own."),
@@ -23,19 +21,23 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Events"
         setUpTableView()
-        setUpNavBar()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavBar()
     }
     
     //    MARK: Navigation Bar
     
     func setUpNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        let p = NSMutableParagraphStyle()
-        p.firstLineHeadIndent = 25
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: p]
+//        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Events"
+        self.view.backgroundColor = .white
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.firstLineHeadIndent = 25
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
     }
     
     //    MARK: Table View
@@ -54,6 +56,12 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = EventDetailViewController()
+        viewController.setUpViewController(event: self.eventArray[indexPath.row])
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func setUpTableView() {
         eventsTableView.register(EventCell.self, forCellReuseIdentifier: "eventCell")
         
@@ -65,7 +73,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             make.right.equalToSuperview()
             make.left.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
     }
 }
