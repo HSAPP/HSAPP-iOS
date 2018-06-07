@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        UINavigationBar.appearance().prefersLargeTitles = true
+        
         return true
     }
 

@@ -24,7 +24,7 @@ class EventCell: UITableViewCell {
         }
         
         dateImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(16)
+            make.top.equalTo(dateLabel.snp.top).offset(2)
             make.left.equalToSuperview().offset(sideSpace)
             make.height.equalTo(16)
             make.width.equalTo(16)
@@ -37,7 +37,7 @@ class EventCell: UITableViewCell {
         }
         
         placeImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(dateLabel.snp.bottom).offset(16)
+            make.top.equalTo(placeLabel.snp.top).offset(2)
             make.left.equalToSuperview().offset(sideSpace)
             make.height.equalTo(16)
             make.width.equalTo(16)
@@ -67,7 +67,7 @@ class EventCell: UITableViewCell {
     private var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Medium", size: 16)
-//        label.textAlignment = .center
+        label.textColor = UIColor.AppColors.lightBlue
         return label
     }()
     
@@ -87,26 +87,21 @@ class EventCell: UITableViewCell {
     
     private var placeImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "location")
+        imageView.image = #imageLiteral(resourceName: "location")
         return imageView
     }()
     
     private var dateImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Clock")
+        imageView.image = #imageLiteral(resourceName: "Clock")
         return imageView
     }()
     
     private func addLabelsToCell() {
-        self.addSubview(titleLabel)
-        self.addSubview(dateLabel)
-        self.addSubview(placeLabel)
-        self.addSubview(descriptionLabel)
-        self.addSubview(placeImageView)
-        self.addSubview(dateImageView)
+        [titleLabel, dateLabel, placeLabel, descriptionLabel, placeImageView, dateImageView].forEach { (view) in
+            self.addSubview(view)
+        }
     }
-    
-    
     
     func setUp(event: Event) {
         
@@ -118,9 +113,6 @@ class EventCell: UITableViewCell {
         dateLabel.text = event.date
         placeLabel.text = event.place
         descriptionLabel.text = event.description
-        
-        
     }
-    
     
 }
