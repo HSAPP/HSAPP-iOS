@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+//        Original View controller
         window = UIWindow(frame: UIScreen.main.bounds)
-        
         let mainViewController = InitialTabBarController()
         
         window?.rootViewController = mainViewController
-        
         window?.makeKeyAndVisible()
         
+//        Nav bar setup
         UINavigationBar.appearance().prefersLargeTitles = true
         
         return true
