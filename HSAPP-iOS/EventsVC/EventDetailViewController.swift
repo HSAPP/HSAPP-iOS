@@ -73,7 +73,6 @@ class EventDetailViewController: UIViewController {
     }
     
     func setUpNavBar() {
-//        navigationController?.navigationBar.prefersLargeTitles = true
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.firstLineHeadIndent = 0
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
@@ -95,4 +94,16 @@ class EventDetailViewController: UIViewController {
         setConstraints()
     }
     
+    
+    
+}
+
+extension UINavigationController: UINavigationBarDelegate {
+    
+    
+    public func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.firstLineHeadIndent = 25
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
+    }
 }

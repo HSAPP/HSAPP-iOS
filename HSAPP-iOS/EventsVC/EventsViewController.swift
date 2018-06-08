@@ -12,6 +12,7 @@ import SnapKit
 class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let eventsTableView = UITableView()
+    var selectedIndex: IndexPath?
     
     let eventArray = [Event(title: "Basketball Game", date: "Monday Jan 11, 7:00 PM", place: "Encinal Gym",
                             description: "St. Joseph Men's Varsity Basketball vs Encinal Men's Basketball"),
@@ -20,13 +21,17 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpTableView()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        guard let index = selectedIndex else {return}
+        eventsTableView.deselectRow(at: index, animated: true)
     }
     
     //    MARK: Navigation Bar
@@ -60,6 +65,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let viewController = EventDetailViewController()
         viewController.setUpViewController(event: self.eventArray[indexPath.row])
         navigationController?.pushViewController(viewController, animated: true)
+        self.selectedIndex = indexPath
     }
     
     func setUpTableView() {
