@@ -13,4 +13,12 @@ struct Assignment {
     var dueDate: String
     var score: String
     var grade: String
+    
+    init(title: String, dueDate: String, score: String, grade: String) {
+        self.title = title
+        self.dueDate = dueDate
+        self.score = score
+        self.grade = grade
+    }
+    
 }

@@ -14,13 +14,14 @@ class AssignmentCell: UITableViewCell {
 
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 28)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 22)
         return label
     }()
     
     private var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Medium", size: 14)
+        label.textColor = UIColor.gray
         return label
     }()
     
@@ -32,7 +33,7 @@ class AssignmentCell: UITableViewCell {
     
     private var scoreLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 14)
+        label.font = UIFont(name: ".SFUIText-Medium", size: 14)
         label.textColor = UIColor.darkGray
         return label
     }()
@@ -59,13 +60,13 @@ class AssignmentCell: UITableViewCell {
         }
         
         gradeLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.top).offset(4)
+            make.top.equalTo(titleLabel.snp.top)
             //            make.left.equalTo(titleLabel.snp.right).offset(45)
             make.right.equalToSuperview().offset(-20)
         }
         
         scoreLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(gradeLabel.snp.bottom).offset(12)
+            make.top.equalTo(gradeLabel.snp.bottom).offset(8)
             make.right.equalToSuperview().offset(-20)
         }
     }

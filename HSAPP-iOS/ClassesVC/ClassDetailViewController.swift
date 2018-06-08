@@ -27,35 +27,46 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "\(String(describing: classroom?.title))"
+        self.view.backgroundColor = UIColor.white
+        guard let title = classroom?.title else {return}
+        self.title = "\(title)"
         scoreLabel.text = classroom?.score
+        addSubviews()
         setUpNavBar()
         setUpTableView()
         setUpConstraints()
         // Do any additional setup after loading the view.
     }
+    
+    func setUpVC(classroom: Classroom) {
+        self.classroom = classroom
+        
+        
+        scoreLabel.text = classroom.score
+    }
 
     func setUpNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        let p = NSMutableParagraphStyle()
-        p.firstLineHeadIndent = 0
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: p]
+    }
+    
+    func addSubviews() {
+        self.view.addSubview(assignmentTableView)
+        self.view.addSubview(scoreLabel)
     }
     
     func setUpConstraints() {
         
         scoreLabel.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(20)
+            make.left.equalToSuperview().offset(20)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(40)
-            make.left.equalToSuperview().offset(-20)
+            make.right.equalToSuperview().offset(-20)
         }
         
         assignmentTableView.snp.makeConstraints { (make) in
             make.right.equalToSuperview()
             make.left.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.top.equalTo(scoreLabel.snp.bottom)
+            make.top.equalTo(scoreLabel.snp.bottom).offset(10)
         }
     }
     
@@ -75,7 +86,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     //MARK: TABLEVIEW FUNCTIONS
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 85
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
