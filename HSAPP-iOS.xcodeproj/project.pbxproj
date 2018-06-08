@@ -20,6 +20,7 @@
 		848C641720C9BB5C0012A287 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641620C9BB5C0012A287 /* Assignment.swift */; };
 		848C641920C9BD570012A287 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641820C9BD570012A287 /* Classroom.swift */; };
 		848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641A20CAEF000012A287 /* ClassDetailViewController.swift */; };
+		848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641C20CB07BD0012A287 /* AssignmentCell.swift */; };
 		F6619CE9BC363CC1BBCE3989 /* Pods_HSAPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		848C641620C9BB5C0012A287 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		848C641820C9BD570012A287 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
 		848C641A20CAEF000012A287 /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
+		848C641C20CB07BD0012A287 /* AssignmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 		B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSAPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC10160B62AD6FFA04666A5B /* Pods-HSAPP-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1BD374D78CD1AFE1CB1DF8 /* Pods-HSAPP-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				848C640F20C9B8950012A287 /* ClassesViewController.swift */,
 				848C641120C9BA0B0012A287 /* ClassCell.swift */,
 				848C641A20CAEF000012A287 /* ClassDetailViewController.swift */,
+				848C641C20CB07BD0012A287 /* AssignmentCell.swift */,
 			);
 			path = ClassesVC;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
+				848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */,
 				848C641920C9BD570012A287 /* Classroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

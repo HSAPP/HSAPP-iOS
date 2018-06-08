@@ -12,4 +12,5 @@ struct Assignment {
     var title: String
     var dueDate: String
     var score: String
+    var grade: String
 }

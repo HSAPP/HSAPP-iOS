@@ -85,11 +85,11 @@ class ClassCell: UITableViewCell {
     }
     
     //this never gets called because we're not using any nib/xib files
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // Initialization code
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        
+//        // Initialization code
+//    }
 
 
 }

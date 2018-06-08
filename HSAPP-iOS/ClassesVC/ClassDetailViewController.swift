@@ -63,7 +63,8 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         assignmentTableView.delegate = self
         assignmentTableView.dataSource = self
         
-        assignmentTableView.register(ClassCell.self, forCellReuseIdentifier: "ClassCell")
+        
+        assignmentTableView.register(AssignmentCell.self, forCellReuseIdentifier: "AssignmentCell")
         
         self.view.addSubview(assignmentTableView)
         
@@ -83,7 +84,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = assignmentTableView.dequeueReusableCell(withIdentifier: "AssignmentCell") as! AssignmentCell
+        guard let classroom = classroom else {return cell}
+        cell.setUp(assignment: classroom.assignments[indexPath.row])
+        return cell
     }
     
 
