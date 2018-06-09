@@ -11,7 +11,6 @@ import SnapKit
 
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
     let classesTableView = UITableView()
     let classrooms = [Classroom(title: "French", grade: "A", score: "95/100", assignments: []), Classroom(title: "Calculus", grade: "A", score: "93/100", assignments: []), Classroom(title: "Chemistry", grade: "A", score: "97/100", assignments: []), Classroom(title: "Theatre", grade: "A", score: "96/100", assignments: []), Classroom(title: "P.E", grade: "A", score: "100/100", assignments: [])]
     

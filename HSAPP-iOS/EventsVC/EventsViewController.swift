@@ -35,9 +35,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Events"
         self.view.backgroundColor = .white
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.firstLineHeadIndent = 25
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.firstLineHeadIndent = 25
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
     }
     
     //    MARK: Table View
