@@ -17,6 +17,7 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let clubsTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(ClubCell.self, forCellReuseIdentifier: "clubCell")
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -24,8 +25,11 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         setUpTableView()
-        setUpNavBar()
         setContraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavBar()
     }
     
     func setContraints() {
@@ -42,9 +46,9 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.title = "Clubs"
         
 //        Move title to be alligned with the text
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.firstLineHeadIndent = 25
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
+//        let paragraphStyle = NSMutableParagraphStyle()
+//        paragraphStyle.firstLineHeadIndent = 25
+//        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
     }
     
     //    MARK: Table View
@@ -62,6 +66,12 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = ClubDetailViewController()
+        viewController.setUpViewController(club: clubs[indexPath.row])
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

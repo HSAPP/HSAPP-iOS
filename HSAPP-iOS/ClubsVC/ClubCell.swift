@@ -13,18 +13,10 @@ class ClubCell: UITableViewCell {
     
     var club: Club?
     
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: ".SFUIText", size: 14)
-        label.numberOfLines = 2
-        label.textColor = UIColor.darkGray
-        label.numberOfLines = 3
-        return label
-    }()
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Bold", size: 28)
+        label.textColor = .white
         return label
     }()
     
@@ -36,34 +28,81 @@ class ClubCell: UITableViewCell {
     
     let memberCountLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Medium", size: 16)
+        label.font = UIFont(name: ".SFUIText-Medium", size: 20)
+        label.textColor = .white
         return label
     }()
     
+    let containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        view.layer.cornerRadius = 5
+        return view
+    }()
+    
+    let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 5
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = #imageLiteral(resourceName: "footballImage")
+        return imageView
+    }()
+    
+    let darkView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.backgroundColor = .black
+        view.alpha = 0.35
+        return view
+    }()
+    
     func setConstraints() {
+        backgroundImageView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+            make.left.equalToSuperview()
+        }
+        
+        darkView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+            make.left.equalToSuperview()
+        }
+        
+        containerView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(16)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview()
+            
+        }
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
-            make.left.equalTo(memberCountImageView.snp.right).offset(8)
+            make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-20)
         }
         
         memberCountImageView.snp.makeConstraints { (make) in
             make.top.equalTo(memberCountLabel.snp.top).offset(2)
             make.left.equalToSuperview().offset(20)
-            make.height.equalTo(16)
-            make.width.equalTo(16)
+            make.height.equalTo(18)
+            make.width.equalTo(18)
         }
         
         memberCountLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(16)
-            make.left.equalTo(titleLabel.snp.left)
+            make.left.equalTo(memberCountImageView.snp.right).offset(8)
             make.right.equalToSuperview().offset(-16)
         }
     }
     
     func addSubviews() {
-        [descriptionLabel, titleLabel, memberCountImageView, memberCountLabel].forEach { (view) in
-            self.addSubview(view)
+        self.addSubview(containerView)
+        [backgroundImageView, darkView, titleLabel, memberCountImageView, memberCountLabel].forEach { (view) in
+            self.containerView.addSubview(view)
         }
     }
     
@@ -73,12 +112,20 @@ class ClubCell: UITableViewCell {
         setConstraints()
         
         self.club = club
-        self.descriptionLabel.text = club.description
         self.titleLabel.text = club.title
         self.memberCountLabel.text = String(club.memberCount)
         if let memberLimit = club.memberLimit {
             memberCountLabel.text?.append(" / \(memberLimit)")
         }
         
+        self.selectionStyle = .none
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            darkView.alpha = 0.55
+        } else {
+            darkView.alpha = 0.35
+        }
     }
 }

@@ -10,6 +10,7 @@
 		48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5320CB170700C856F7 /* ClubsViewController.swift */; };
 		48086C5720CB2F9700C856F7 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5620CB2F9700C856F7 /* ClubCell.swift */; };
 		48086C5920CB2FC000C856F7 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5820CB2FC000C856F7 /* Club.swift */; };
+		48086C5B20CC89D700C856F7 /* ClubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5A20CC89D700C856F7 /* ClubDetailViewController.swift */; };
 		4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752020C9B6B3000F070C /* EventDetailViewController.swift */; };
 		4811752320C9B7BE000F070C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752220C9B7BE000F070C /* AppColors.swift */; };
 		4811752520C9CF39000F070C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752420C9CF39000F070C /* Event.swift */; };
@@ -32,6 +33,7 @@
 		48086C5320CB170700C856F7 /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
 		48086C5620CB2F9700C856F7 /* ClubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
 		48086C5820CB2FC000C856F7 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		48086C5A20CC89D700C856F7 /* ClubDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailViewController.swift; sourceTree = "<group>"; };
 		4811752020C9B6B3000F070C /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		4811752220C9B7BE000F070C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		4811752420C9CF39000F070C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				48086C5820CB2FC000C856F7 /* Club.swift */,
 				48086C5320CB170700C856F7 /* ClubsViewController.swift */,
 				48086C5620CB2F9700C856F7 /* ClubCell.swift */,
+				48086C5A20CC89D700C856F7 /* ClubDetailViewController.swift */,
 			);
 			path = ClubsVC;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
+				48086C5B20CC89D700C856F7 /* ClubDetailViewController.swift in Sources */,
 				48086C5720CB2F9700C856F7 /* ClubCell.swift in Sources */,
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */,
