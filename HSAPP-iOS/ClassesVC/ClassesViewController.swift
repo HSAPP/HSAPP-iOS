@@ -11,11 +11,16 @@ import SnapKit
 
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A"), Assignment(title: "pg 125-127", dueDate: "Mon, June 4", score: "94/100", grade: "A"), Assignment(title: "pg 135-137", dueDate: "Tue, May 27", score: "94/100", grade: "A"), Assignment(title: "pg 140-147", dueDate: "Tue, May 27", score: "94/100", grade: "A")]
+
     let classesTableView = UITableView()
-    let classrooms = [Classroom(title: "French", grade: "A", score: "95/100", assignments: []), Classroom(title: "Calculus", grade: "A", score: "93/100", assignments: []), Classroom(title: "Chemistry", grade: "A", score: "97/100", assignments: []), Classroom(title: "Theatre", grade: "A", score: "96/100", assignments: []), Classroom(title: "P.E", grade: "A", score: "100/100", assignments: [])]
+    var classrooms: [Classroom]?
+    var selectedIndex: IndexPath?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        classrooms = [Classroom(title: "French", grade: "A", score: "95/100", assignments: frenchAssignments), Classroom(title: "Calculus", grade: "A", score: "93/100", assignments: frenchAssignments), Classroom(title: "Chemistry", grade: "A", score: "97/100", assignments: frenchAssignments), Classroom(title: "Theatre", grade: "A", score: "96/100", assignments: frenchAssignments), Classroom(title: "P.E", grade: "A", score: "100/100", assignments: frenchAssignments)]
         
         self.view.backgroundColor = UIColor.white
         self.title = "Classrooms"
@@ -39,15 +44,26 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.classrooms.count
+        guard let classrooms = self.classrooms else {return 0}
+        return classrooms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = classesTableView.dequeueReusableCell(withIdentifier: "ClassCell") as! ClassCell
-        cell.setUp(classroom: self.classrooms[indexPath.row])
+        guard let classrooms = self.classrooms else {return cell}
+        cell.setUp(classroom: classrooms[indexPath.row])
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = ClassDetailViewController()
+        
+        guard let classrooms = self.classrooms else {return}
+        
+        viewController.setUpVC(classroom: classrooms[indexPath.row])
+        navigationController?.pushViewController(viewController, animated: true)
+        self.selectedIndex = indexPath
+    }
     
 
     func setUpTableView() {

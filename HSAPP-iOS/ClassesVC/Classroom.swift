@@ -14,6 +14,7 @@ struct Classroom {
     var score: String
     var assignments: [Assignment]
     
+    
     init(title: String, grade: String, score: String, assignments: [Assignment]) {
         self.title = title
         self.grade = grade
