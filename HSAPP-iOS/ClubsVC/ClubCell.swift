@@ -53,7 +53,7 @@ class ClubCell: UITableViewCell {
         let view = UIView()
         view.layer.cornerRadius = 5
         view.backgroundColor = .black
-        view.alpha = 0.25
+        view.alpha = 0.35
         return view
     }()
     
@@ -76,7 +76,7 @@ class ClubCell: UITableViewCell {
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-            make.bottom.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview()
             
         }
         titleLabel.snp.makeConstraints { (make) in
@@ -118,5 +118,14 @@ class ClubCell: UITableViewCell {
             memberCountLabel.text?.append(" / \(memberLimit)")
         }
         
+        self.selectionStyle = .none
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            darkView.alpha = 0.55
+        } else {
+            darkView.alpha = 0.35
+        }
     }
 }
