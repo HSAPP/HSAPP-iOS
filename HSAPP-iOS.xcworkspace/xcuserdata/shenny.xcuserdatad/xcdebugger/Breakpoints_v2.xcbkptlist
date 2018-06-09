@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550209272.838438"
+            timestampString = "550280578.767215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "setUpVC(classroom:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,76 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550209272.838552"
+            timestampString = "550280578.768541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "setUpConstraints()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HSAPP_iOS.ClassDetailViewController.setUpConstraints() -&gt; ()"
-                  moduleName = "HSAPP-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-                  timestampString = "550185487.34218"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in HSAPP_iOS.ClassDetailViewController.setUpConstraints() -&gt; ()"
-                  moduleName = "HSAPP-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-                  timestampString = "550185487.345351"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550209272.838647"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "setUpVC(classroom:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550209272.8387409"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
+            timestampString = "550280578.7693059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "setUpTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

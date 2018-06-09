@@ -12,37 +12,8 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
 
     let assignmentTableView = UITableView()
+    var classDetailHeader: CDView?
     
-    let teacherImage: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "Sunny"))
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 25
-        imageView.clipsToBounds = true
-        
-        return imageView
-    }()
-    
-    let teacherNameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 18)
-        
-        return label
-    }()
-    
-    let gradeLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 24)
-
-        return label
-    }()
-    
-    let scoreLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-SemiBold", size: 18)
-        label.textColor = UIColor.darkGray
-
-        return label
-    }()
     
     
     var classroom: Classroom?
@@ -52,10 +23,11 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        guard let classroom = self.classroom else {return}
+        let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 165)
         
-        gradeLabel.text = "A"
-        scoreLabel.text = classroom?.score
-        teacherNameLabel.text = "S. Ouyang"
+        classDetailHeader = CDView(frame: cdHeaderFrame, classroom: classroom)
+        
         addSubviews()
         setUpNavBar()
         setUpTableView()
@@ -66,8 +38,6 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     func setUpVC(classroom: Classroom) {
         self.classroom = classroom
         
-        
-        scoreLabel.text = classroom.score
     }
 
     func setUpNavBar() {
@@ -77,52 +47,26 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func addSubviews() {
-        self.view.addSubview(teacherImage)
-        self.view.addSubview(teacherNameLabel)
         self.view.addSubview(assignmentTableView)
-        self.view.addSubview(scoreLabel)
-        self.view.addSubview(gradeLabel)
+
     }
     
     func setUpConstraints() {
         
         
-        teacherImage.snp.makeConstraints { (make) in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
-            make.left.equalToSuperview().offset(20)
-            make.height.equalTo(50)
-            make.width.equalTo(50)
-        }
-        
-        teacherNameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
-            make.left.equalTo(teacherImage.snp.right).offset(2)
-        }
-        
-        gradeLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalTo(teacherImage.snp.bottom).offset(20)
-            make.right.equalToSuperview().offset(-20)
-        }
-        
-        scoreLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalTo(gradeLabel.snp.bottom).offset(4)
-            make.right.equalToSuperview().offset(-20)
-        }
-        
         assignmentTableView.snp.makeConstraints { (make) in
             make.right.equalToSuperview()
             make.left.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.top.equalTo(scoreLabel.snp.bottom).offset(10)
+            make.top.equalToSuperview()
         }
     }
     
     func setUpTableView() {
+        
         assignmentTableView.delegate = self
         assignmentTableView.dataSource = self
-        
+        assignmentTableView.tableHeaderView = classDetailHeader
         
         assignmentTableView.register(AssignmentCell.self, forCellReuseIdentifier: "AssignmentCell")
         

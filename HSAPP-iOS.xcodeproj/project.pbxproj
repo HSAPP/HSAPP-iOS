@@ -18,6 +18,7 @@
 		48BFE46B20C8A36100E656D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BFE46A20C8A36100E656D7 /* Assets.xcassets */; };
 		48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105320C8B3BA00DFC232 /* EventsViewController.swift */; };
 		48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105820C8C1C400DFC232 /* EventCell.swift */; };
+		8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */; };
 		848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C640F20C9B8950012A287 /* ClassesViewController.swift */; };
 		848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641120C9BA0B0012A287 /* ClassCell.swift */; };
 		848C641720C9BB5C0012A287 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641620C9BB5C0012A287 /* Assignment.swift */; };
@@ -41,6 +42,7 @@
 		48BFE46F20C8A36100E656D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E6105320C8B3BA00DFC232 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		48E6105820C8C1C400DFC232 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailHeaderView.swift; sourceTree = "<group>"; };
 		848C640F20C9B8950012A287 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		848C641120C9BA0B0012A287 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		848C641620C9BB5C0012A287 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				848C640F20C9B8950012A287 /* ClassesViewController.swift */,
 				848C641120C9BA0B0012A287 /* ClassCell.swift */,
 				848C641A20CAEF000012A287 /* ClassDetailViewController.swift */,
+				8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */,
 				848C641C20CB07BD0012A287 /* AssignmentCell.swift */,
 			);
 			path = ClassesVC;
@@ -269,6 +272,7 @@
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
 				48086C5720CB2F9700C856F7 /* ClubCell.swift in Sources */,
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
+				8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */,
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
