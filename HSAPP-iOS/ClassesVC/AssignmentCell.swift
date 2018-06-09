@@ -14,7 +14,7 @@ class AssignmentCell: UITableViewCell {
 
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 22)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 20)
         return label
     }()
     
@@ -27,7 +27,7 @@ class AssignmentCell: UITableViewCell {
     
     private var gradeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 22)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 22)
         return label
     }()
     
@@ -83,10 +83,5 @@ class AssignmentCell: UITableViewCell {
         
     }
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-
     
 }
