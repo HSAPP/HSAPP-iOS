@@ -13,9 +13,33 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
 
     let assignmentTableView = UITableView()
     
+    let teacherImage: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Sunny"))
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 25
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }()
+    
+    let teacherNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText-Bold", size: 18)
+        
+        return label
+    }()
+    
+    let gradeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText-Bold", size: 24)
+
+        return label
+    }()
+    
     let scoreLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 22)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 18)
+        label.textColor = UIColor.darkGray
 
         return label
     }()
@@ -28,9 +52,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        guard let title = classroom?.title else {return}
-        self.title = "\(title)"
+        
+        gradeLabel.text = "A"
         scoreLabel.text = classroom?.score
+        teacherNameLabel.text = "S. Ouyang"
         addSubviews()
         setUpNavBar()
         setUpTableView()
@@ -46,19 +71,43 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     func setUpNavBar() {
+        guard let title = classroom?.title else {return}
+        self.title = "\(title)"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func addSubviews() {
+        self.view.addSubview(teacherImage)
+        self.view.addSubview(teacherNameLabel)
         self.view.addSubview(assignmentTableView)
         self.view.addSubview(scoreLabel)
+        self.view.addSubview(gradeLabel)
     }
     
     func setUpConstraints() {
         
+        
+        teacherImage.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.left.equalToSuperview().offset(20)
+            make.height.equalTo(50)
+            make.width.equalTo(50)
+        }
+        
+        teacherNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.left.equalTo(teacherImage.snp.right).offset(2)
+        }
+        
+        gradeLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalTo(teacherImage.snp.bottom).offset(20)
+            make.right.equalToSuperview().offset(-20)
+        }
+        
         scoreLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(40)
+            make.top.equalTo(gradeLabel.snp.bottom).offset(4)
             make.right.equalToSuperview().offset(-20)
         }
         

@@ -16,13 +16,13 @@ class ClassCell: UITableViewCell {
     
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 28)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 26)
         return label
     }()
     
     private var gradeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 22)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 20)
         return label
     }()
     
@@ -35,7 +35,7 @@ class ClassCell: UITableViewCell {
     
     private var assignmentsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 14)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 12)
         label.textColor = UIColor.gray
         return label
     }()

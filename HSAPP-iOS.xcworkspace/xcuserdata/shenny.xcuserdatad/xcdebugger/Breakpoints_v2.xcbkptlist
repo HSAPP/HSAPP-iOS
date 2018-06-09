@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550186822.596999"
+            timestampString = "550209272.838438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "setUpVC(classroom:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550186822.59714"
+            timestampString = "550209272.838552"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "setUpConstraints()"
             landmarkType = "7">
             <Locations>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550186822.597211"
+            timestampString = "550209272.838647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "setUpVC(classroom:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550186822.597293"
+            timestampString = "550209272.8387409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

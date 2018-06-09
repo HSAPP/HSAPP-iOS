@@ -40,7 +40,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: TABLEVIEW FUNCTIONS
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 95
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
