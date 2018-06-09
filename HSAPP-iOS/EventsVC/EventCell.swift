@@ -57,27 +57,27 @@ class EventCell: UITableViewCell {
         
     }
     
-    private var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Bold", size: 28)
 //        label.textAlignment = .center
         return label
     }()
     
-    private var dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Medium", size: 16)
         label.textColor = UIColor.AppColors.lightBlue
         return label
     }()
     
-    private var placeLabel: UILabel = {
+    private let placeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-Medium", size: 16)
         return label
     }()
     
-    private var descriptionLabel: UILabel = {
+    private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText", size: 14)
         label.numberOfLines = 2
@@ -85,13 +85,13 @@ class EventCell: UITableViewCell {
         return label
     }()
     
-    private var placeImageView: UIImageView = {
+    private let placeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "location")
         return imageView
     }()
     
-    private var dateImageView: UIImageView = {
+    private let dateImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "Clock")
         return imageView
