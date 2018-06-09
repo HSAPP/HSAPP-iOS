@@ -39,8 +39,15 @@ class InitialTabBarController: UITabBarController, UITabBarControllerDelegate {
         let tabTwoBarItem = UITabBarItem(title: "Classrooms", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
         navTwo.tabBarItem = tabTwoBarItem
         
+        // Create Tab three
+        let clubsVC = ClubsViewController()
+        let navThree = UINavigationController(rootViewController: clubsVC)
         
-        self.viewControllers = [navOne, navTwo]
+        let tabThreeBarItem = UITabBarItem(title: "Clubs", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        navThree.tabBarItem = tabThreeBarItem
+        
+        
+        self.viewControllers = [navOne, navTwo, navThree]
     }
 
 

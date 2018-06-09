@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5320CB170700C856F7 /* ClubsViewController.swift */; };
+		48086C5720CB2F9700C856F7 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5620CB2F9700C856F7 /* ClubCell.swift */; };
+		48086C5920CB2FC000C856F7 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086C5820CB2FC000C856F7 /* Club.swift */; };
 		4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752020C9B6B3000F070C /* EventDetailViewController.swift */; };
 		4811752320C9B7BE000F070C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752220C9B7BE000F070C /* AppColors.swift */; };
 		4811752520C9CF39000F070C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752420C9CF39000F070C /* Event.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48086C5320CB170700C856F7 /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
+		48086C5620CB2F9700C856F7 /* ClubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
+		48086C5820CB2FC000C856F7 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		4811752020C9B6B3000F070C /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		4811752220C9B7BE000F070C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		4811752420C9CF39000F070C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -67,6 +73,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		48086C5220CB15CC00C856F7 /* ClubsVC */ = {
+			isa = PBXGroup;
+			children = (
+				48086C5820CB2FC000C856F7 /* Club.swift */,
+				48086C5320CB170700C856F7 /* ClubsViewController.swift */,
+				48086C5620CB2F9700C856F7 /* ClubCell.swift */,
+			);
+			path = ClubsVC;
+			sourceTree = "<group>";
+		};
 		48BFE45720C8A35F00E656D7 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +109,7 @@
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
 				848C641320C9BA100012A287 /* ClassesVC */,
 				48E6105720C8C17600DFC232 /* EventsVC */,
+				48086C5220CB15CC00C856F7 /* ClubsVC */,
 				48BFE46A20C8A36100E656D7 /* Assets.xcassets */,
 				48BFE46F20C8A36100E656D7 /* Info.plist */,
 			);
@@ -244,10 +261,13 @@
 				4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */,
 				4811752520C9CF39000F070C /* Event.swift in Sources */,
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
+				48086C5920CB2FC000C856F7 /* Club.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
+				48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
+				48086C5720CB2F9700C856F7 /* ClubCell.swift in Sources */,
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
