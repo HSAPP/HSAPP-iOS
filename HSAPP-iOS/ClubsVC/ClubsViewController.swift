@@ -45,10 +45,6 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.backgroundColor = .white
         self.title = "Clubs"
         
-//        Move title to be alligned with the text
-//        let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.firstLineHeadIndent = 25
-//        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.paragraphStyle: paragraphStyle]
     }
     
     //    MARK: Table View

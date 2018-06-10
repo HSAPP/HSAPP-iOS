@@ -53,7 +53,7 @@ class ClubCell: UITableViewCell {
         let view = UIView()
         view.layer.cornerRadius = 5
         view.backgroundColor = .black
-        view.alpha = 0.35
+        view.alpha = 0.55
         return view
     }()
     
@@ -82,12 +82,12 @@ class ClubCell: UITableViewCell {
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-20)
+            make.right.equalToSuperview().offset(-16)
         }
         
         memberCountImageView.snp.makeConstraints { (make) in
             make.top.equalTo(memberCountLabel.snp.top).offset(2)
-            make.left.equalToSuperview().offset(20)
+            make.left.equalToSuperview().offset(16)
             make.height.equalTo(18)
             make.width.equalTo(18)
         }
