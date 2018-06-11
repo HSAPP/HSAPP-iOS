@@ -30,6 +30,13 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        guard let index = selectedIndex else {return}
+        self.classesTableView.deselectRow(at: index, animated: animated)
+    }
+    
+    
     func setUpNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         let p = NSMutableParagraphStyle()
@@ -83,3 +90,5 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 }
+
+
