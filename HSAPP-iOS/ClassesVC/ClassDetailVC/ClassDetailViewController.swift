@@ -22,10 +22,8 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
         guard let classroom = self.classroom else {return}
         let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 165)
-        guard let first = classroom.assignments.first else {return}
         let testingCells = [Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-"), Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-")]
         inProgress = testingCells
         classDetailHeader = CDView(frame: cdHeaderFrame, classroom: classroom)
@@ -86,12 +84,11 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return 80
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let assignments = classroom?.assignments else {return 0}
-        guard let inProgressAssignments = inProgress else {return 0}
         
         if section == 0 {
             return 1
@@ -114,10 +111,22 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 85), color: UIColor.white)
+            return view
+        } else {
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 85), color: UIColor.white)
+            return view
+        }
+    }
+    
 
 }
 
 extension ClassDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    //MARK: COLLECTIONVIEW FUNCTIONS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.bounds.width, height: 85)

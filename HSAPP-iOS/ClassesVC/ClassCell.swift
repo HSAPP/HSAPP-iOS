@@ -35,7 +35,7 @@ class ClassCell: UITableViewCell {
     
     private var assignmentsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 12)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 14)
         label.textColor = UIColor.gray
         return label
     }()

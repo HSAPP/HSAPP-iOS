@@ -14,7 +14,7 @@ class AssignmentCell: UITableViewCell {
 
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-SemiBold", size: 20)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 18)
         return label
     }()
     
@@ -66,7 +66,7 @@ class AssignmentCell: UITableViewCell {
         }
         
         scoreLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(gradeLabel.snp.bottom).offset(8)
+            make.top.equalTo(gradeLabel.snp.bottom).offset(6)
             make.right.equalToSuperview().offset(-20)
         }
     }
