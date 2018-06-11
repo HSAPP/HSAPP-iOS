@@ -28,7 +28,8 @@ struct HeaderHelper {
         // Constraints
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(20)
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(30)
         }
         
         
