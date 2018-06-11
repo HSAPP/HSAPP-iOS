@@ -25,7 +25,9 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         self.view.backgroundColor = UIColor.white
         guard let classroom = self.classroom else {return}
         let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 165)
-        inProgress = classroom.assignments
+        guard let first = classroom.assignments.first else {return}
+        let testingCells = [Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-"), Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-")]
+        inProgress = testingCells
         classDetailHeader = CDView(frame: cdHeaderFrame, classroom: classroom)
         
         addSubviews()
@@ -92,7 +94,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         guard let inProgressAssignments = inProgress else {return 0}
         
         if section == 0 {
-            return inProgressAssignments.count
+            return 1
         } else {
             return assignments.count
         }
@@ -115,8 +117,11 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
 
 }
 
-extension ClassDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ClassDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.bounds.width, height: 85)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let inProgress = self.inProgress else {return 0}
