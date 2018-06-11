@@ -30,14 +30,14 @@ class CDView: UIView {
     
     let gradeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-Bold", size: 24)
+        label.font = UIFont(name: ".SFUIText-Bold", size: 30)
         
         return label
     }()
     
     let scoreLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-SemiBold", size: 18)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 24)
         label.textColor = UIColor.darkGray
         
         return label

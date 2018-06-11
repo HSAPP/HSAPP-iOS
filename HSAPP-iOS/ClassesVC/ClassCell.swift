@@ -40,14 +40,21 @@ class ClassCell: UITableViewCell {
         return label
     }()
     
+    
+    
     private func addLabelsToCell() {
+        
         self.addSubview(titleLabel)
         self.addSubview(gradeLabel)
         self.addSubview(scoreLabel)
         self.addSubview(assignmentsLabel)
+        
     }
     
     private func setUpConstraints() {
+        
+        
+        
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(20)
@@ -74,6 +81,7 @@ class ClassCell: UITableViewCell {
     }
     
     func setUp(classroom: Classroom) {
+    
         addLabelsToCell()
         setUpConstraints()
         self.Classroom = classroom
@@ -83,6 +91,8 @@ class ClassCell: UITableViewCell {
         assignmentsLabel.text = "\(classroom.assignments.count) assignments are due"
         scoreLabel.text = classroom.score
     }
+    
+   
     
     //this never gets called because we're not using any nib/xib files
 //    override func awakeFromNib() {
