@@ -48,7 +48,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //    MARK: Table View
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 185
+        return 190
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
