@@ -15,7 +15,7 @@ class InProgressAssignmentCell: UICollectionViewCell {
     
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-SemiBold", size: 20)
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 18)
         return label
     }()
     
@@ -72,8 +72,9 @@ class InProgressAssignmentCell: UICollectionViewCell {
     }
     
     func setUp(assignment: Assignment) {
+
         self.assignment = assignment
-        self.backgroundColor = UIColor.white
+        self.contentView.backgroundColor = UIColor.white
         addLabels()
         setUpConstraints()
         titleLabel.text = assignment.title

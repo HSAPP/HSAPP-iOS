@@ -20,8 +20,9 @@
 		48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105320C8B3BA00DFC232 /* EventsViewController.swift */; };
 		48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6105820C8C1C400DFC232 /* EventCell.swift */; };
 		8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */; };
-		8450390B20CDD70E00A4C803 /* InProgressAssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450390A20CDD70E00A4C803 /* InProgressAssignmentCell.swift */; };
-		8450390F20CDD7F700A4C803 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450390E20CDD7F700A4C803 /* ProgressCell.swift */; };
+		8450391220CDFFF900A4C803 /* ProgressTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391120CDFFF900A4C803 /* ProgressTableCell.swift */; };
+		8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391320CE004600A4C803 /* ProgressCollectionCell.swift */; };
+		8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */; };
 		848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C640F20C9B8950012A287 /* ClassesViewController.swift */; };
 		848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641120C9BA0B0012A287 /* ClassCell.swift */; };
 		848C641720C9BB5C0012A287 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641620C9BB5C0012A287 /* Assignment.swift */; };
@@ -47,8 +48,9 @@
 		48E6105320C8B3BA00DFC232 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		48E6105820C8C1C400DFC232 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailHeaderView.swift; sourceTree = "<group>"; };
-		8450390A20CDD70E00A4C803 /* InProgressAssignmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressAssignmentCell.swift; sourceTree = "<group>"; };
-		8450390E20CDD7F700A4C803 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
+		8450391120CDFFF900A4C803 /* ProgressTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableCell.swift; sourceTree = "<group>"; };
+		8450391320CE004600A4C803 /* ProgressCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionCell.swift; sourceTree = "<group>"; };
+		8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewHeaderHelper.swift; sourceTree = "<group>"; };
 		848C640F20C9B8950012A287 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		848C641120C9BA0B0012A287 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		848C641620C9BB5C0012A287 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
@@ -140,10 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				848C641620C9BB5C0012A287 /* Assignment.swift */,
+				8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */,
 				8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */,
 				848C641A20CAEF000012A287 /* ClassDetailViewController.swift */,
-				8450390E20CDD7F700A4C803 /* ProgressCell.swift */,
-				8450390A20CDD70E00A4C803 /* InProgressAssignmentCell.swift */,
+				8450391120CDFFF900A4C803 /* ProgressTableCell.swift */,
+				8450391320CE004600A4C803 /* ProgressCollectionCell.swift */,
 				848C641C20CB07BD0012A287 /* AssignmentCell.swift */,
 			);
 			path = ClassDetailVC;
@@ -281,10 +284,8 @@
 				4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */,
 				4811752520C9CF39000F070C /* Event.swift in Sources */,
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
-				8450390B20CDD70E00A4C803 /* InProgressAssignmentCell.swift in Sources */,
 				48086C5920CB2FC000C856F7 /* Club.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
-				8450390F20CDD7F700A4C803 /* ProgressCell.swift in Sources */,
 				48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
@@ -294,7 +295,10 @@
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */,
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
+				8450391220CDFFF900A4C803 /* ProgressTableCell.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
+				8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */,
+				8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
 				848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */,
 				848C641920C9BD570012A287 /* Classroom.swift in Sources */,

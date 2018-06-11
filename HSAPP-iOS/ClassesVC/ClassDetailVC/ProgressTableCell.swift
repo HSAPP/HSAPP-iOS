@@ -19,11 +19,7 @@ class ProgressCell: UITableViewCell {
     func setUp
         <D: UICollectionViewDataSource & UICollectionViewDelegate>
         (dataSourceDelegate: D, forRow row: Int) {
-        flowLayout.scrollDirection = .horizontal
-        let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
-        assignmentCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
-        assignmentCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")
-        self.addSubview(assignmentCollectionView!)
+        setUpCollectionView()
         assignmentCollectionView?.delegate = dataSourceDelegate
         assignmentCollectionView?.dataSource = dataSourceDelegate
         assignmentCollectionView?.tag = row
@@ -39,5 +35,15 @@ class ProgressCell: UITableViewCell {
             make.bottom.equalToSuperview()
         }
     }
-
+    
+    private func setUpCollectionView() {
+        flowLayout.scrollDirection = .horizontal
+        let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
+        assignmentCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
+        assignmentCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")
+        self.addSubview(assignmentCollectionView!)
+        
+    }
+    
 }
+
