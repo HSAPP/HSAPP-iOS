@@ -31,7 +31,6 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         addSubviews()
         setUpNavBar()
         setUpTableView()
-        setUpConstraints()
         // Do any additional setup after loading the view.
     }
     
@@ -51,19 +50,9 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
 
     }
     
-    func setUpConstraints() {
-        
-        
-        assignmentTableView.snp.makeConstraints { (make) in
-            make.right.equalToSuperview()
-            make.left.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.top.equalToSuperview()
-        }
-    }
-    
     func setUpTableView() {
         
+        assignmentTableView.backgroundColor = UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1)
         assignmentTableView.delegate = self
         assignmentTableView.dataSource = self
         assignmentTableView.tableHeaderView = classDetailHeader
@@ -73,18 +62,30 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.view.addSubview(assignmentTableView)
         
+        assignmentTableView.snp.makeConstraints { (make) in
+            make.right.equalToSuperview()
+            make.left.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalToSuperview()
+        }
         
     }
     
     
     //MARK: TABLEVIEW FUNCTIONS
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        if indexPath.section == 0 {
+            return 100
+        } else {
+            return 80
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,10 +114,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 85), color: UIColor.white)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1))
             return view
         } else {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 85), color: UIColor.white)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1))
             return view
         }
     }
@@ -129,7 +130,7 @@ extension ClassDetailViewController: UICollectionViewDataSource, UICollectionVie
     //MARK: COLLECTIONVIEW FUNCTIONS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width, height: 85)
+        return CGSize(width: self.view.bounds.width * 0.7, height: 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

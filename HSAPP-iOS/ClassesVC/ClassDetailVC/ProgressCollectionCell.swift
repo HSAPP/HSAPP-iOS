@@ -39,14 +39,29 @@ class InProgressAssignmentCell: UICollectionViewCell {
         return label
     }()
     
+    private var containerView: UIView = {
+       let view = UIView()
+        view.layer.cornerRadius = 7
+        view.backgroundColor = UIColor.white
+       return view
+    }()
+    
     private func addLabels() {
-        self.addSubview(titleLabel)
-        self.addSubview(dateLabel)
-        self.addSubview(gradeLabel)
-        self.addSubview(scoreLabel)
+        self.addSubview(containerView)
+        [titleLabel, dateLabel, gradeLabel, scoreLabel].forEach { (label) in
+            containerView.addSubview(label)
+        }
     }
     
     private func setUpConstraints() {
+        
+        containerView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(16)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
+        
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(20)
@@ -74,7 +89,6 @@ class InProgressAssignmentCell: UICollectionViewCell {
     func setUp(assignment: Assignment) {
 
         self.assignment = assignment
-        self.contentView.backgroundColor = UIColor.white
         addLabels()
         setUpConstraints()
         titleLabel.text = assignment.title
