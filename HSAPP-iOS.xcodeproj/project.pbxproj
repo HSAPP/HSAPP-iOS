@@ -136,18 +136,26 @@
 			path = EventsVC;
 			sourceTree = "<group>";
 		};
-		848C641320C9BA100012A287 /* ClassesVC */ = {
+		8450391020CDF55400A4C803 /* ClassDetailVC */ = {
 			isa = PBXGroup;
 			children = (
 				848C641620C9BB5C0012A287 /* Assignment.swift */,
-				848C641820C9BD570012A287 /* Classroom.swift */,
-				848C640F20C9B8950012A287 /* ClassesViewController.swift */,
 				8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */,
 				848C641A20CAEF000012A287 /* ClassDetailViewController.swift */,
-				848C641120C9BA0B0012A287 /* ClassCell.swift */,
-				848C641C20CB07BD0012A287 /* AssignmentCell.swift */,
 				8450390E20CDD7F700A4C803 /* ProgressCell.swift */,
 				8450390A20CDD70E00A4C803 /* InProgressAssignmentCell.swift */,
+				848C641C20CB07BD0012A287 /* AssignmentCell.swift */,
+			);
+			path = ClassDetailVC;
+			sourceTree = "<group>";
+		};
+		848C641320C9BA100012A287 /* ClassesVC */ = {
+			isa = PBXGroup;
+			children = (
+				848C641820C9BD570012A287 /* Classroom.swift */,
+				848C640F20C9B8950012A287 /* ClassesViewController.swift */,
+				848C641120C9BA0B0012A287 /* ClassCell.swift */,
+				8450391020CDF55400A4C803 /* ClassDetailVC */,
 			);
 			path = ClassesVC;
 			sourceTree = "<group>";

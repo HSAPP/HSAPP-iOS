@@ -14,12 +14,12 @@ class ProgressCell: UITableViewCell {
     let flowLayout = UICollectionViewFlowLayout()
     
     
+    
     //we're going to pass in the datasource and delegate. So the delegate and datasource is going to come from our viewcontroller, not from our tableview cell
     func setUp
         <D: UICollectionViewDataSource & UICollectionViewDelegate>
         (dataSourceDelegate: D, forRow row: Int) {
         flowLayout.scrollDirection = .horizontal
-        
         let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         assignmentCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
         assignmentCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")

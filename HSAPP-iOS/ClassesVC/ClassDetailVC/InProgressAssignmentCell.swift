@@ -73,7 +73,7 @@ class InProgressAssignmentCell: UICollectionViewCell {
     
     func setUp(assignment: Assignment) {
         self.assignment = assignment
-        
+        self.backgroundColor = UIColor.white
         addLabels()
         setUpConstraints()
         titleLabel.text = assignment.title
