@@ -13,11 +13,13 @@ struct Event {
     var date: String
     var place: String
     var description: String
+    var price: Float?
     
-    init(title: String, date: String, place: String, description: String) {
+    init(title: String, date: String, place: String, description: String, price: Float?) {
         self.title = title
         self.date = date
         self.place = place
         self.description = description
+        self.price = price
     }
 }

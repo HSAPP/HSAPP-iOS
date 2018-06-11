@@ -50,11 +50,33 @@ class EventCell: UITableViewCell {
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(placeLabel.snp.bottom).offset(16)
             make.left.equalTo(titleLabel.snp.left)
             make.right.equalToSuperview().offset(-sideSpace)
         }
         
+        if self.event?.price != nil {
+            self.priceImageView.snp.makeConstraints { (make) in
+                make.top.equalTo(priceLabel.snp.top).offset(2)
+                make.left.equalToSuperview().offset(sideSpace)
+                make.height.equalTo(16)
+                make.width.equalTo(16)
+            }
+
+            self.priceLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(placeLabel.snp.bottom).offset(16)
+                make.left.equalTo(titleLabel.snp.left)
+                make.right.equalToSuperview().offset(-sideSpace)
+            }
+
+            self.descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(priceLabel.snp.bottom).offset(16)
+            }
+        } else {
+        
+            self.descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(placeLabel.snp.bottom).offset(16)
+            }
+        }
     }
     
     private let titleLabel: UILabel = {
@@ -97,22 +119,43 @@ class EventCell: UITableViewCell {
         return imageView
     }()
     
+    private let priceImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "DollarSign")
+        return imageView
+    }()
+    
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText-Medium", size: 16)
+        return label
+    }()
+    
     private func addLabelsToCell() {
         [titleLabel, dateLabel, placeLabel, descriptionLabel, placeImageView, dateImageView].forEach { (view) in
             self.addSubview(view)
+        }
+        if (self.event?.price) != nil {
+            [priceImageView, priceLabel].forEach { (view) in
+                self.addSubview(view)
+            }
         }
     }
     
     func setUp(event: Event) {
         
+        self.event = event
+        
         addLabelsToCell()
         setConstraints()
         
-        self.event = event
         titleLabel.text = event.title
         dateLabel.text = event.date
         placeLabel.text = event.place
         descriptionLabel.text = event.description
+        if let price = event.price {
+            priceLabel.text = String(price)
+        }
     }
     
 }

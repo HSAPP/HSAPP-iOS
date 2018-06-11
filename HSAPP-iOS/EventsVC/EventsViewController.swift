@@ -15,9 +15,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var selectedIndex: IndexPath?
     
     let eventArray = [Event(title: "Basketball Game", date: "Monday Jan 11, 7:00 PM", place: "Encinal Gym",
-                            description: "St. Joseph Men's Varsity Basketball vs Encinal Men's Basketball"),
-                      Event(title: "French food event", date: "Tuesday Jan 12, 9:12 AM", place: "Room 202", description: "Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own."),
-                      Event(title: "Trip to 6 Flags", date: "Saturday Feb 15, 8:00 AM", place: "In front of main hall", description: "One day trip to six flags. Bring signed document from parent.")]
+                            description: "St. Joseph Men's Varsity Basketball vs Encinal Men's Basketball", price: nil),
+                      Event(title: "French food event", date: "Tuesday Jan 12, 9:12 AM", place: "Room 202", description: "Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own. Try out different french foods. Don't forget to bring your own.", price: 20),
+                      Event(title: "Trip to 6 Flags", date: "Saturday Feb 15, 8:00 AM", place: "In front of main hall", description: "One day trip to six flags. Bring signed document from parent.", price: nil)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,11 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //    MARK: Table View
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        if eventArray[indexPath.row].price == nil {
+            return 175
+        } else {
+            return 210
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
