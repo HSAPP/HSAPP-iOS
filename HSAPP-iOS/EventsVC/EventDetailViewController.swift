@@ -59,10 +59,27 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
         return label
     }()
     
+    private let priceImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "DollarSign")
+        return imageView
+    }()
+    
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText-Medium", size: 16)
+        return label
+    }()
+    
     func addSubViews() {
         self.view.addSubview(scrollView)
         [imageView, placeLabel, placeImageView, dateImageView, dateLabel, descriptionLabel].forEach { (view) in
             self.scrollView.addSubview(view)
+        }
+        if (self.event?.price) != nil {
+            [priceImageView, priceLabel].forEach { (view) in
+                self.view.addSubview(view)
+            }
         }
     }
     
@@ -110,10 +127,33 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(placeLabel.snp.bottom).offset(16)
             make.left.equalTo(dateLabel.snp.left)
             make.right.equalToSuperview().offset(-16)
             make.bottom.equalToSuperview().offset(-16)
+        }
+        
+        if self.event?.price != nil {
+            self.priceImageView.snp.makeConstraints { (make) in
+                make.top.equalTo(priceLabel.snp.top).offset(2)
+                make.left.equalToSuperview().offset(16)
+                make.height.equalTo(16)
+                make.width.equalTo(16)
+            }
+            
+            self.priceLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(placeLabel.snp.bottom).offset(16)
+                make.left.equalTo(dateLabel.snp.left)
+                make.right.equalToSuperview().offset(-16)
+            }
+            
+            self.descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(priceLabel.snp.bottom).offset(16)
+            }
+        } else {
+            
+            self.descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(placeLabel.snp.bottom).offset(16)
+            }
         }
     }
     
@@ -129,6 +169,9 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
         dateLabel.text = event.date
         placeLabel.text = event.place
         descriptionLabel.text = event.description
+        if let price = event.price {
+            self.priceLabel.text = String(price)
+        }
     }
     
     
