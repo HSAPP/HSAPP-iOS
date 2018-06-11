@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550280578.767215"
+            timestampString = "550367936.920831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550280578.768541"
+            timestampString = "550367936.9215831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,12 +42,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HSAPP-iOS/ClassesVC/ClassDetailViewController.swift"
-            timestampString = "550280578.7693059"
+            timestampString = "550367936.9220181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "setUpTableView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HSAPP-iOS/ClassesVC/ClassCell.swift"
+            timestampString = "550367936.922359"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "addLabelsToCell()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
