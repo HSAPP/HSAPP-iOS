@@ -15,6 +15,8 @@
 		4811752320C9B7BE000F070C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752220C9B7BE000F070C /* AppColors.swift */; };
 		4811752520C9CF39000F070C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752420C9CF39000F070C /* Event.swift */; };
 		48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA120CF176F000032D1 /* HomeViewController.swift */; };
+		48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */; };
+		48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA520CF3E5E000032D1 /* Menu.swift */; };
 		48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46320C8A35F00E656D7 /* AppDelegate.swift */; };
 		48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */; };
 		48BFE46B20C8A36100E656D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BFE46A20C8A36100E656D7 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		4811752220C9B7BE000F070C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		4811752420C9CF39000F070C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		48BC4CA120CF176F000032D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaCell.swift; sourceTree = "<group>"; };
+		48BC4CA520CF3E5E000032D1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		48BFE46020C8A35F00E656D7 /* HSAPP-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HSAPP-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BFE46320C8A35F00E656D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBarController.swift; sourceTree = "<group>"; };
@@ -100,8 +104,18 @@
 			isa = PBXGroup;
 			children = (
 				48BC4CA120CF176F000032D1 /* HomeViewController.swift */,
+				48BC4CA720CF3E62000032D1 /* Cafeteria */,
 			);
 			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		48BC4CA720CF3E62000032D1 /* Cafeteria */ = {
+			isa = PBXGroup;
+			children = (
+				48BC4CA520CF3E5E000032D1 /* Menu.swift */,
+				48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */,
+			);
+			path = Cafeteria;
 			sourceTree = "<group>";
 		};
 		48BFE45720C8A35F00E656D7 = {
@@ -297,6 +311,7 @@
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
 				48086C5920CB2FC000C856F7 /* Club.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
+				48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */,
 				48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */,
@@ -309,6 +324,7 @@
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
 				8450391220CDFFF900A4C803 /* ProgressTableCell.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
+				48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */,
 				8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */,
 				8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
