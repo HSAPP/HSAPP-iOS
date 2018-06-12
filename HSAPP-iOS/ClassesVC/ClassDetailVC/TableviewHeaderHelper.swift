@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct HeaderHelper {
-    static  func createTasksTitleHeaderView(title: String, fontSize: CGFloat, frame: CGRect, color: UIColor) -> UIView
+    static  func createTasksTitleHeaderView(title: String, fontSize: CGFloat, frame: CGRect, color: UIColor, bottomOffset: Int) -> UIView
     {
         let vw = UIView(frame:frame)
         vw.backgroundColor = color
@@ -28,7 +28,7 @@ struct HeaderHelper {
         // Constraints
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(20)
-            make.bottom.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(bottomOffset)
             make.top.equalToSuperview().offset(30)
         }
         

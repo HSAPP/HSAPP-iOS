@@ -81,7 +81,7 @@ class InProgressAssignmentCell: UICollectionViewCell {
         }
         
         scoreLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(gradeLabel.snp.bottom).offset(8)
+            make.top.equalTo(gradeLabel.snp.bottom).offset(4)
             make.right.equalToSuperview().offset(-20)
         }
     }

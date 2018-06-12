@@ -42,7 +42,7 @@ class ProgressCell: UITableViewCell {
         let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         assignmentCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
         assignmentCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")
-        assignmentCollectionView?.backgroundColor = UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1)
+        assignmentCollectionView?.backgroundColor = UIColor.AppColors.backgroundGray
         assignmentCollectionView?.showsHorizontalScrollIndicator = false
         self.addSubview(assignmentCollectionView!)
         
