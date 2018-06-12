@@ -48,13 +48,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let viewController = MenuDetailViewController()
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = CafeteriaCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cafeteriaCell") as! CafeteriaCell
             cell.setUp(menu: [])
             return cell
         } else {

@@ -55,7 +55,7 @@ class ClubDetailViewController: UIViewController {
         setConstraints()
     }
     
-    func setUpViewController(club: Club) {
+    func setUp(club: Club) {
         self.club = club
     }
     

@@ -67,7 +67,7 @@ class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = ClubDetailViewController()
-        viewController.setUpViewController(club: clubs[indexPath.row])
+        viewController.setUp(club: clubs[indexPath.row])
         navigationController?.pushViewController(viewController, animated: true)
     }
     
