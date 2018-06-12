@@ -174,17 +174,12 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     override func viewDidLoad() {
-        
         self.view.backgroundColor = .white
         setUpNavBar()
         addSubViews()
         setConstraints()
-        
     }
-    
-    
     
 }
 

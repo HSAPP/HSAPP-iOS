@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
