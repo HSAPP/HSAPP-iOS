@@ -23,7 +23,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let classroom = self.classroom else {return}
-        let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 165)
+        let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 170)
         let testingCells = [Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-"), Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-")]
         inProgress = testingCells
         classDetailHeader = CDView(frame: cdHeaderFrame, classroom: classroom)
@@ -52,7 +52,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func setUpTableView() {
         
-        assignmentTableView.backgroundColor = UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1)
+        assignmentTableView.backgroundColor = UIColor.AppColors.backgroundGray
         assignmentTableView.delegate = self
         assignmentTableView.dataSource = self
         assignmentTableView.tableHeaderView = classDetailHeader
@@ -114,10 +114,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1))
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundGray, bottomOffset: -10)
             return view
         } else {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1))
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundGray, bottomOffset: -20)
             return view
         }
     }
