@@ -52,7 +52,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func setUpTableView() {
         
-        assignmentTableView.backgroundColor = UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1)
+        assignmentTableView.backgroundColor = UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1)
         assignmentTableView.delegate = self
         assignmentTableView.dataSource = self
         assignmentTableView.tableHeaderView = classDetailHeader
@@ -114,10 +114,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1))
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1))
             return view
         } else {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 235/255, green: 233/255, blue: 231/255, alpha: 1))
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor(red: 226/255, green: 228/255, blue: 233/255, alpha: 1))
             return view
         }
     }
