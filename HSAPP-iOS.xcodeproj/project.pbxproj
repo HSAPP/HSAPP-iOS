@@ -19,7 +19,6 @@
 		48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA520CF3E5E000032D1 /* Menu.swift */; };
 		48BC4CA920CF510D000032D1 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA820CF510D000032D1 /* MenuDetailViewController.swift */; };
 		48BC4CAB20CF5202000032D1 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CAA20CF5202000032D1 /* MenuItemCell.swift */; };
-		48BC4CAD20D08677000032D1 /* MenuFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CAC20D08677000032D1 /* MenuFilterView.swift */; };
 		48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46320C8A35F00E656D7 /* AppDelegate.swift */; };
 		48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */; };
 		48BFE46B20C8A36100E656D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BFE46A20C8A36100E656D7 /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		48BC4CA520CF3E5E000032D1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		48BC4CA820CF510D000032D1 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		48BC4CAA20CF5202000032D1 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
-		48BC4CAC20D08677000032D1 /* MenuFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterView.swift; sourceTree = "<group>"; };
 		48BFE46020C8A35F00E656D7 /* HSAPP-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HSAPP-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BFE46320C8A35F00E656D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBarController.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */,
 				48BC4CA520CF3E5E000032D1 /* Menu.swift */,
 				48BC4CA820CF510D000032D1 /* MenuDetailViewController.swift */,
-				48BC4CAC20D08677000032D1 /* MenuFilterView.swift */,
 				48BC4CAA20CF5202000032D1 /* MenuItemCell.swift */,
 			);
 			path = Cafeteria;
@@ -323,7 +320,6 @@
 				48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */,
 				48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */,
 				48BC4CAB20CF5202000032D1 /* MenuItemCell.swift in Sources */,
-				48BC4CAD20D08677000032D1 /* MenuFilterView.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
