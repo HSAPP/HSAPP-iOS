@@ -21,6 +21,31 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         return tableView
     }()
     
+    @objc func clickedNavBarRightItem(sender: UIBarButtonItem) {
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    let alertController: UIAlertController = {
+        let alertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let filterView = MenuFilterView(frame: CGRect(x: 10, y: 10, width: alertController.view.bounds.width - 40, height: 120))
+        filterView.setUp()
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert: UIAlertAction!) in
+            print("cancel")
+        })
+        
+        let doneAction = UIAlertAction(title: "Done", style: .default, handler: { (alert: UIAlertAction!) in
+            print("cancel")
+        })
+        
+        alertController.view.addSubview(filterView)
+        alertController.addAction(doneAction)
+        alertController.addAction(cancelAction)
+        
+        return alertController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBar()
@@ -31,7 +56,7 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func setUpNavBar() {
         self.title = "Cafeteria Menu"
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(clickedNavBarRightItem(sender:)))
     }
     
     func addSubviews() {
