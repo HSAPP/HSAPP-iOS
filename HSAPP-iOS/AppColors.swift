@@ -24,5 +24,13 @@ extension UIColor {
             return UIColor(red: 194/255, green: 205/255, blue: 233/255, alpha: 1)
         }
         
+        static var backgroundWhite: UIColor {
+            return UIColor(red: 252/255, green: 250/255, blue: 250/255, alpha: 1)
+        }
+        
+        static var viewWhite: UIColor {
+            return UIColor(red: 253/255, green: 252/255, blue: 252/255, alpha: 1)
+        }
+        
     }
 }

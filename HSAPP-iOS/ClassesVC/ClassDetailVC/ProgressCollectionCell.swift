@@ -42,7 +42,11 @@ class InProgressAssignmentCell: UICollectionViewCell {
     private var containerView: UIView = {
        let view = UIView()
         view.layer.cornerRadius = 7
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.AppColors.viewWhite
+        view.layer.shadowColor = UIColor.lightGray.cgColor
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOffset = CGSize.zero
+        view.layer.shadowRadius = 7
        return view
     }()
     

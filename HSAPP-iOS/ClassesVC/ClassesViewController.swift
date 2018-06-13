@@ -22,7 +22,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         classrooms = [Classroom(title: "French", grade: "A", score: "95/100", assignments: frenchAssignments), Classroom(title: "Calculus", grade: "A", score: "93/100", assignments: frenchAssignments), Classroom(title: "Chemistry", grade: "A", score: "97/100", assignments: frenchAssignments), Classroom(title: "Theatre", grade: "A", score: "96/100", assignments: frenchAssignments), Classroom(title: "P.E", grade: "A", score: "100/100", assignments: frenchAssignments)]
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.AppColors.backgroundWhite
         self.title = "Classrooms"
         setUpNavBar()
         

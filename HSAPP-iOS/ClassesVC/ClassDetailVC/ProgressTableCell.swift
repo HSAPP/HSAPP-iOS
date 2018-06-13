@@ -38,11 +38,11 @@ class ProgressCell: UITableViewCell {
     
     private func setUpCollectionView() {
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumLineSpacing = 1
         let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         assignmentCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
         assignmentCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")
-        assignmentCollectionView?.backgroundColor = UIColor.AppColors.backgroundGray
+        assignmentCollectionView?.backgroundColor = UIColor.AppColors.backgroundWhite
         assignmentCollectionView?.showsHorizontalScrollIndicator = false
         self.addSubview(assignmentCollectionView!)
         

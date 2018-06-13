@@ -73,7 +73,7 @@ class AssignmentCell: UITableViewCell {
     
     func setUp(assignment: Assignment) {
         self.assignment = assignment
-        
+        self.contentView.backgroundColor = UIColor.AppColors.backgroundWhite
         addLabels()
         setUpConstraints()
         titleLabel.text = assignment.title

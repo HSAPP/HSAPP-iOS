@@ -46,7 +46,7 @@ class CDView: UIView {
     
      init(frame: CGRect, classroom: Classroom) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.AppColors.backgroundWhite
         gradeLabel.text = "A"
         scoreLabel.text = classroom.score
         teacherNameLabel.text = "S. Ouyang"
