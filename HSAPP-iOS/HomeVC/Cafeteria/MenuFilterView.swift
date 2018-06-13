@@ -6,4 +6,11 @@
 //  Copyright © 2018 Tony Cioara. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import SnapKit
+
+class MenuFilterView: UIView {
+    
+}
+
+

@@ -21,6 +21,32 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         return tableView
     }()
     
+    @objc func clickedNavBarRightItem(sender: UIBarButtonItem) {
+        self.view.addSubview(darkView)
+        self.view.addSubview(filterView)
+        
+        darkView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        
+        filterView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.height.equalTo(filterView.snp.width)
+        }
+    }
+    
+    let filterView = MenuFilterView()
+    let darkView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.alpha = 0.3
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBar()
@@ -31,7 +57,7 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func setUpNavBar() {
         self.title = "Cafeteria Menu"
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(clickedNavBarRightItem(sender:)))
     }
     
     func addSubviews() {
