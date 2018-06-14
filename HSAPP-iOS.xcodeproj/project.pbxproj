@@ -39,6 +39,10 @@
 		848C641920C9BD570012A287 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641820C9BD570012A287 /* Classroom.swift */; };
 		848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641A20CAEF000012A287 /* ClassDetailViewController.swift */; };
 		848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641C20CB07BD0012A287 /* AssignmentCell.swift */; };
+		84F30D2920D31BB90007661B /* SunnyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F30D2820D31BB90007661B /* SunnyHomeViewController.swift */; };
+		84F30D2B20D31CE30007661B /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F30D2A20D31CE30007661B /* MenuTableCell.swift */; };
+		84F30D2D20D31F8D0007661B /* MenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F30D2C20D31F8D0007661B /* MenuCollectionCell.swift */; };
+		84F30D2F20D324440007661B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F30D2E20D324440007661B /* MenuItem.swift */; };
 		F6619CE9BC363CC1BBCE3989 /* Pods_HSAPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		848C641820C9BD570012A287 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
 		848C641A20CAEF000012A287 /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		848C641C20CB07BD0012A287 /* AssignmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
+		84F30D2820D31BB90007661B /* SunnyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnyHomeViewController.swift; sourceTree = "<group>"; };
+		84F30D2A20D31CE30007661B /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
+		84F30D2C20D31F8D0007661B /* MenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCell.swift; sourceTree = "<group>"; };
+		84F30D2E20D324440007661B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B6243E1B92D267EA403D6084 /* Pods_HSAPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSAPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC10160B62AD6FFA04666A5B /* Pods-HSAPP-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EB1BD374D78CD1AFE1CB1DF8 /* Pods-HSAPP-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSAPP-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSAPP-iOS/Pods-HSAPP-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 				48BFE46320C8A35F00E656D7 /* AppDelegate.swift */,
 				4811752220C9B7BE000F070C /* AppColors.swift */,
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
+				84F30D2720D31B960007661B /* SunnyHomeVC */,
 				848C641320C9BA100012A287 /* ClassesVC */,
 				48E6105720C8C17600DFC232 /* EventsVC */,
 				48086C5220CB15CC00C856F7 /* ClubsVC */,
@@ -215,6 +224,17 @@
 				8450391020CDF55400A4C803 /* ClassDetailVC */,
 			);
 			path = ClassesVC;
+			sourceTree = "<group>";
+		};
+		84F30D2720D31B960007661B /* SunnyHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				84F30D2820D31BB90007661B /* SunnyHomeViewController.swift */,
+				84F30D2A20D31CE30007661B /* MenuTableCell.swift */,
+				84F30D2C20D31F8D0007661B /* MenuCollectionCell.swift */,
+				84F30D2E20D324440007661B /* MenuItem.swift */,
+			);
+			path = SunnyHomeVC;
 			sourceTree = "<group>";
 		};
 		A460B84C9DE91E8D6FAFEBC2 /* Frameworks */ = {
@@ -339,6 +359,7 @@
 				4811752520C9CF39000F070C /* Event.swift in Sources */,
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
 				48086C5920CB2FC000C856F7 /* Club.swift in Sources */,
+				84F30D2B20D31CE30007661B /* MenuTableCell.swift in Sources */,
 				482562EA20D1D2B8001851E3 /* Announcement.swift in Sources */,
 				482562EE20D1DE47001851E3 /* LinkCell.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
@@ -348,6 +369,7 @@
 				482562EC20D1D8CE001851E3 /* AnnouncementDetailViewController.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */,
+				84F30D2F20D324440007661B /* MenuItem.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
 				48BFE46620C8A35F00E656D7 /* InitialTabBarController.swift in Sources */,
 				48086C5B20CC89D700C856F7 /* ClubDetailViewController.swift in Sources */,
@@ -364,7 +386,9 @@
 				48BC4CA920CF510D000032D1 /* MenuDetailViewController.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
 				848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */,
+				84F30D2920D31BB90007661B /* SunnyHomeViewController.swift in Sources */,
 				482562E820D1D0C8001851E3 /* AnnouncementCell.swift in Sources */,
+				84F30D2D20D31F8D0007661B /* MenuCollectionCell.swift in Sources */,
 				848C641920C9BD570012A287 /* Classroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
