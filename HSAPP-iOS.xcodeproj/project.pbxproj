@@ -14,6 +14,11 @@
 		4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752020C9B6B3000F070C /* EventDetailViewController.swift */; };
 		4811752320C9B7BE000F070C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752220C9B7BE000F070C /* AppColors.swift */; };
 		4811752520C9CF39000F070C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811752420C9CF39000F070C /* Event.swift */; };
+		482562E820D1D0C8001851E3 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562E720D1D0C8001851E3 /* AnnouncementCell.swift */; };
+		482562EA20D1D2B8001851E3 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562E920D1D2B8001851E3 /* Announcement.swift */; };
+		482562EC20D1D8CE001851E3 /* AnnouncementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562EB20D1D8CE001851E3 /* AnnouncementDetailViewController.swift */; };
+		482562EE20D1DE47001851E3 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562ED20D1DE47001851E3 /* LinkCell.swift */; };
+		482562F120D1DEB0001851E3 /* URLWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562F020D1DEB0001851E3 /* URLWithTitle.swift */; };
 		48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA120CF176F000032D1 /* HomeViewController.swift */; };
 		48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */; };
 		48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA520CF3E5E000032D1 /* Menu.swift */; };
@@ -45,6 +50,11 @@
 		4811752020C9B6B3000F070C /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		4811752220C9B7BE000F070C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		4811752420C9CF39000F070C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		482562E720D1D0C8001851E3 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
+		482562E920D1D2B8001851E3 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		482562EB20D1D8CE001851E3 /* AnnouncementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailViewController.swift; sourceTree = "<group>"; };
+		482562ED20D1DE47001851E3 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
+		482562F020D1DEB0001851E3 /* URLWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithTitle.swift; sourceTree = "<group>"; };
 		48BC4CA120CF176F000032D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaCell.swift; sourceTree = "<group>"; };
 		48BC4CA520CF3E5E000032D1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -104,10 +114,23 @@
 			path = ClubsVC;
 			sourceTree = "<group>";
 		};
+		482562E620D1D07E001851E3 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				482562E920D1D2B8001851E3 /* Announcement.swift */,
+				482562E720D1D0C8001851E3 /* AnnouncementCell.swift */,
+				482562EB20D1D8CE001851E3 /* AnnouncementDetailViewController.swift */,
+				482562ED20D1DE47001851E3 /* LinkCell.swift */,
+				482562F020D1DEB0001851E3 /* URLWithTitle.swift */,
+			);
+			path = Announcement;
+			sourceTree = "<group>";
+		};
 		48BC4CA020CF175A000032D1 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
 				48BC4CA120CF176F000032D1 /* HomeViewController.swift */,
+				482562E620D1D07E001851E3 /* Announcement */,
 				48BC4CA720CF3E62000032D1 /* Cafeteria */,
 			);
 			path = HomeVC;
@@ -316,10 +339,13 @@
 				4811752520C9CF39000F070C /* Event.swift in Sources */,
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
 				48086C5920CB2FC000C856F7 /* Club.swift in Sources */,
+				482562EA20D1D2B8001851E3 /* Announcement.swift in Sources */,
+				482562EE20D1DE47001851E3 /* LinkCell.swift in Sources */,
 				48E6105920C8C1C400DFC232 /* EventCell.swift in Sources */,
 				48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */,
 				48086C5420CB170700C856F7 /* ClubsViewController.swift in Sources */,
 				48BC4CAB20CF5202000032D1 /* MenuItemCell.swift in Sources */,
+				482562EC20D1D8CE001851E3 /* AnnouncementDetailViewController.swift in Sources */,
 				848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */,
 				48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */,
 				848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */,
@@ -333,10 +359,12 @@
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
 				48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */,
 				8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */,
+				482562F120D1DEB0001851E3 /* URLWithTitle.swift in Sources */,
 				8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */,
 				48BC4CA920CF510D000032D1 /* MenuDetailViewController.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
 				848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */,
+				482562E820D1D0C8001851E3 /* AnnouncementCell.swift in Sources */,
 				848C641920C9BD570012A287 /* Classroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JDYWQEVARC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JDYWQEVARC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "HSAPP-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

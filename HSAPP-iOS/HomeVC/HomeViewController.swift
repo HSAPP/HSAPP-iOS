@@ -11,9 +11,11 @@ import SnapKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let announcements = [Announcement(description: "It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future. It is important for your future.", title: "Sign up for SATs", links: [URLWithTitle(URL: URL(fileURLWithPath: ""), title: "Sign Up"), URLWithTitle(URL: URL(fileURLWithPath: ""), title: "More info"), URLWithTitle(URL: URL(fileURLWithPath: ""), title: "Contact support")])]
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(CafeteriaCell.self, forCellReuseIdentifier: "cafeteriaCell")
+        tableView.register(AnnouncementCell.self, forCellReuseIdentifier: "announcementCell")
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -50,12 +52,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 1 + announcements.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let viewController = MenuDetailViewController()
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let viewController = AnnouncementDetailViewController()
+            viewController.setUp(announcement: announcements[indexPath.row - 1])
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
@@ -66,7 +72,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.setUp(menu: [])
             return cell
         } else {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "announcementCell") as! AnnouncementCell
+            cell.setUp(announcement: announcements[indexPath.row - 1])
+            return cell
         }
     }
 }
