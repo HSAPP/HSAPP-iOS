@@ -42,7 +42,7 @@ class MenuTableCell: UITableViewCell {
         flowLayout.minimumLineSpacing = 1
         let collectionViewFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         menuCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
-        menuCollectionView?.register(InProgressAssignmentCell.self, forCellWithReuseIdentifier: "ProgressCollectionCell")
+        menuCollectionView?.register(MenuCollectionCell.self, forCellWithReuseIdentifier: "MenuCollectionCell")
         menuCollectionView?.backgroundColor = UIColor.AppColors.backgroundWhite
         menuCollectionView?.showsHorizontalScrollIndicator = false
         self.addSubview(menuCollectionView!)

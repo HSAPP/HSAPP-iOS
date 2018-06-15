@@ -67,5 +67,149 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HSAPP-iOS/SunnyHomeVC/SunnyHomeViewController.swift"
+            timestampString = "550727322.618109"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "setUpTableView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HSAPP_iOS.SunnyHomeViewController.setUpTableView() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/SunnyHomeViewController.swift"
+                  timestampString = "550725795.396708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "698">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in HSAPP_iOS.SunnyHomeViewController.setUpTableView() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/SunnyHomeViewController.swift"
+                  timestampString = "550725795.40074"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HSAPP-iOS/SunnyHomeVC/MenuCollectionCell.swift"
+            timestampString = "550727322.618192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "addConstraints()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HSAPP_iOS.MenuCollectionCell.addConstraints() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/MenuCollectionCell.swift"
+                  timestampString = "550725795.411629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in HSAPP_iOS.MenuCollectionCell.addConstraints() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/MenuCollectionCell.swift"
+                  timestampString = "550725795.414935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HSAPP-iOS/SunnyHomeVC/MenuTableCell.swift"
+            timestampString = "550727322.618257"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "addConstraints()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HSAPP_iOS.MenuTableCell.(addConstraints in _2C45948C67A76C8646913DC64FEF7C4C)() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/MenuTableCell.swift"
+                  timestampString = "550725795.423214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in HSAPP_iOS.MenuTableCell.(addConstraints in _2C45948C67A76C8646913DC64FEF7C4C)() -&gt; ()"
+                  moduleName = "HSAPP-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenny/Desktop/HSAPP-iOS/HSAPP-iOS/SunnyHomeVC/MenuTableCell.swift"
+                  timestampString = "550725795.426378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

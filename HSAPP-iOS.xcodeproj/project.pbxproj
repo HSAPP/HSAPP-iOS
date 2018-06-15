@@ -179,6 +179,7 @@
 				48BFE46320C8A35F00E656D7 /* AppDelegate.swift */,
 				4811752220C9B7BE000F070C /* AppColors.swift */,
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
+				8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */,
 				84F30D2720D31B960007661B /* SunnyHomeVC */,
 				848C641320C9BA100012A287 /* ClassesVC */,
 				48E6105720C8C17600DFC232 /* EventsVC */,
@@ -205,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				848C641620C9BB5C0012A287 /* Assignment.swift */,
-				8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */,
 				8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */,
 				848C641A20CAEF000012A287 /* ClassDetailViewController.swift */,
 				8450391120CDFFF900A4C803 /* ProgressTableCell.swift */,

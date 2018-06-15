@@ -18,7 +18,13 @@ class MenuCollectionCell: UICollectionViewCell {
     
     private var containerView = UIView()
     
-    private var foodImageView = UIImageView(image: #imageLiteral(resourceName: "cafeteriaImage"))
+    private var foodImageView: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "cafeteriaImage"))
+        imageView.layer.cornerRadius = 8
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
     private var titleLabel: UILabel = {
         let label = UILabel()
@@ -42,7 +48,7 @@ class MenuCollectionCell: UICollectionViewCell {
     
     func addUIComponents() {
         self.addSubview(containerView)
-        [titleLabel, descriptionLabel, priceLabel].forEach { (outlet) in
+        [foodImageView, titleLabel, descriptionLabel, priceLabel].forEach { (outlet) in
             containerView.addSubview(outlet)
         }
     }
@@ -50,43 +56,43 @@ class MenuCollectionCell: UICollectionViewCell {
     func addConstraints() {
         
         containerView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(16)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.bottom.equalToSuperview().offset(-16)
+            make.top.equalToSuperview()
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview()
         }
         
         foodImageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.top.equalToSuperview()
-            make.height.equalTo(75)
+            make.top.equalToSuperview().offset(-40)
+            make.height.equalTo(125)
         }
         
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(foodImageView.snp.bottom).offset(16)
-            make.left.equalToSuperview().offset(20)
-            make.right.equalToSuperview().offset(-20)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.left.equalToSuperview().offset(20)
-            make.right.equalToSuperview().offset(-20)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
         }
         
         priceLabel.snp.makeConstraints { (make) in
             make.top.equalTo(foodImageView.snp.bottom).offset(16)
-            make.right.equalToSuperview().offset(-20)
+            make.right.equalToSuperview()
         }
         
     }
     
-    func setUp() {
+    func setUp(menuItem: FoodItem) {
         addUIComponents()
         addConstraints()
-        titleLabel.text = menuItem?.title
-        descriptionLabel.text = menuItem?.description
-        priceLabel.text = menuItem?.price
+        titleLabel.text = menuItem.title
+        descriptionLabel.text = menuItem.description
+        priceLabel.text = menuItem.price
     }
 }

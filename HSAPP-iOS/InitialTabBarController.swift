@@ -47,7 +47,7 @@ class InitialTabBarController: UITabBarController, UITabBarControllerDelegate {
         navThree.tabBarItem = tabThreeBarItem
         
         // Create Tab four
-        let homeVC = HomeViewController()
+        let homeVC = SunnyHomeViewController()
         let navFour = UINavigationController(rootViewController: homeVC)
         
         let tabFourBarItem = UITabBarItem(title: "Home", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
