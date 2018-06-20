@@ -11,9 +11,10 @@ import SnapKit
 
 class ClubsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let clubs = [Club(title: "Football", description: "Coach: Tyrion Lannister \nMeets 3 times a week: \nMonday, 9:00AM \nWednesday, 9:00AM \nFriday, 9:00AM", memberCount: 24, memberLimit: 24),
-                 Club(title: "Sri Lankan Dancing", description: "Hello", memberCount: 11, memberLimit: nil),
-                 Club(title: "Singing", description: "123", memberCount: 8, memberLimit: 22)]
+    let clubs = [
+        Club(title: "Football", description: "Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice. Football is nice.", leadName: "Cercey Lannister", memberCount: 12, memberLimit: 16, meetingTimes: []),
+        Club(title: "Sri Lankan dancing", description: "Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice. Sri Lankan dancing is nice.", leadName: "Jamey Lannister", memberCount: 8, memberLimit: nil, meetingTimes: []),
+        Club(title: "Singing", description: "Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice. Singing is nice.", leadName: "Tyrion Lannister", memberCount: 9, memberLimit: 16, meetingTimes: [])]
     
     let clubsTableView: UITableView = {
         let tableView = UITableView()
