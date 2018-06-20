@@ -24,6 +24,14 @@ class ClubDetailViewController: UIViewController {
         scrollView.alwaysBounceVertical = true
         return scrollView
     }()
+
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: ".SFUIText", size: 14)
+        label.numberOfLines = 0
+        label.textColor = UIColor.darkGray
+        return label
+    }()
     
     func setConstraints() {
         scrollView.snp.makeConstraints { (make) in
@@ -39,11 +47,17 @@ class ClubDetailViewController: UIViewController {
             make.width.equalTo(self.view.frame.width)
             make.height.equalTo(self.view.frame.width / 1.62)
         }
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(imageView.snp.bottom).offset(16)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
     }
     
     func addSubviews() {
         self.view.addSubview(scrollView)
-        [imageView].forEach { (view) in
+        [imageView, descriptionLabel].forEach { (view) in
             self.scrollView.addSubview(view)
         }
     }
@@ -57,6 +71,7 @@ class ClubDetailViewController: UIViewController {
     
     func setUp(club: Club) {
         self.club = club
+        self.descriptionLabel.text = club.description
     }
     
     func setUpNavBar() {
