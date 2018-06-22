@@ -19,6 +19,8 @@
 		482562EC20D1D8CE001851E3 /* AnnouncementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562EB20D1D8CE001851E3 /* AnnouncementDetailViewController.swift */; };
 		482562EE20D1DE47001851E3 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562ED20D1DE47001851E3 /* LinkCell.swift */; };
 		482562F120D1DEB0001851E3 /* URLWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482562F020D1DEB0001851E3 /* URLWithTitle.swift */; };
+		486DD84220DD793200409536 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486DD84120DD793200409536 /* PersonalViewController.swift */; };
+		486DD84420DD7D5C00409536 /* PersonalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486DD84320DD7D5C00409536 /* PersonalViewCell.swift */; };
 		48BC4CA220CF176F000032D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA120CF176F000032D1 /* HomeViewController.swift */; };
 		48BC4CA420CF3A16000032D1 /* CafeteriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */; };
 		48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC4CA520CF3E5E000032D1 /* Menu.swift */; };
@@ -32,7 +34,7 @@
 		8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */; };
 		8450391220CDFFF900A4C803 /* ProgressTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391120CDFFF900A4C803 /* ProgressTableCell.swift */; };
 		8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391320CE004600A4C803 /* ProgressCollectionCell.swift */; };
-		8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */; };
+		8450391620CE377800A4C803 /* TableViewHeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450391520CE377800A4C803 /* TableViewHeaderHelper.swift */; };
 		848C641020C9B8950012A287 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C640F20C9B8950012A287 /* ClassesViewController.swift */; };
 		848C641220C9BA0B0012A287 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641120C9BA0B0012A287 /* ClassCell.swift */; };
 		848C641720C9BB5C0012A287 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C641620C9BB5C0012A287 /* Assignment.swift */; };
@@ -59,6 +61,8 @@
 		482562EB20D1D8CE001851E3 /* AnnouncementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailViewController.swift; sourceTree = "<group>"; };
 		482562ED20D1DE47001851E3 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 		482562F020D1DEB0001851E3 /* URLWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithTitle.swift; sourceTree = "<group>"; };
+		486DD84120DD793200409536 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		486DD84320DD7D5C00409536 /* PersonalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewCell.swift; sourceTree = "<group>"; };
 		48BC4CA120CF176F000032D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48BC4CA320CF3A16000032D1 /* CafeteriaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaCell.swift; sourceTree = "<group>"; };
 		48BC4CA520CF3E5E000032D1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		8450390820CC8CD600A4C803 /* ClassDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailHeaderView.swift; sourceTree = "<group>"; };
 		8450391120CDFFF900A4C803 /* ProgressTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableCell.swift; sourceTree = "<group>"; };
 		8450391320CE004600A4C803 /* ProgressCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionCell.swift; sourceTree = "<group>"; };
-		8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewHeaderHelper.swift; sourceTree = "<group>"; };
+		8450391520CE377800A4C803 /* TableViewHeaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderHelper.swift; sourceTree = "<group>"; };
 		848C640F20C9B8950012A287 /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		848C641120C9BA0B0012A287 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		848C641620C9BB5C0012A287 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			path = Announcement;
 			sourceTree = "<group>";
 		};
+		486DD84020DD77F100409536 /* PersonalVC */ = {
+			isa = PBXGroup;
+			children = (
+				486DD84120DD793200409536 /* PersonalViewController.swift */,
+				486DD84320DD7D5C00409536 /* PersonalViewCell.swift */,
+			);
+			path = PersonalVC;
+			sourceTree = "<group>";
+		};
 		48BC4CA020CF175A000032D1 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +192,11 @@
 				48BFE46320C8A35F00E656D7 /* AppDelegate.swift */,
 				4811752220C9B7BE000F070C /* AppColors.swift */,
 				48BFE46520C8A35F00E656D7 /* InitialTabBarController.swift */,
-				8450391520CE377800A4C803 /* TableviewHeaderHelper.swift */,
+				8450391520CE377800A4C803 /* TableViewHeaderHelper.swift */,
 				84F30D2720D31B960007661B /* SunnyHomeVC */,
 				848C641320C9BA100012A287 /* ClassesVC */,
 				48E6105720C8C17600DFC232 /* EventsVC */,
+				486DD84020DD77F100409536 /* PersonalVC */,
 				48086C5220CB15CC00C856F7 /* ClubsVC */,
 				48BC4CA020CF175A000032D1 /* HomeVC */,
 				48BFE46A20C8A36100E656D7 /* Assets.xcassets */,
@@ -355,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486DD84420DD7D5C00409536 /* PersonalViewCell.swift in Sources */,
 				4811752120C9B6B3000F070C /* EventDetailViewController.swift in Sources */,
 				4811752520C9CF39000F070C /* Event.swift in Sources */,
 				848C641720C9BB5C0012A287 /* Assignment.swift in Sources */,
@@ -377,12 +392,13 @@
 				48BFE46420C8A35F00E656D7 /* AppDelegate.swift in Sources */,
 				8450390920CC8CD600A4C803 /* ClassDetailHeaderView.swift in Sources */,
 				4811752320C9B7BE000F070C /* AppColors.swift in Sources */,
+				486DD84220DD793200409536 /* PersonalViewController.swift in Sources */,
 				8450391220CDFFF900A4C803 /* ProgressTableCell.swift in Sources */,
 				48E6105420C8B3BA00DFC232 /* EventsViewController.swift in Sources */,
 				48BC4CA620CF3E5E000032D1 /* Menu.swift in Sources */,
 				8450391420CE004600A4C803 /* ProgressCollectionCell.swift in Sources */,
 				482562F120D1DEB0001851E3 /* URLWithTitle.swift in Sources */,
-				8450391620CE377800A4C803 /* TableviewHeaderHelper.swift in Sources */,
+				8450391620CE377800A4C803 /* TableViewHeaderHelper.swift in Sources */,
 				48BC4CA920CF510D000032D1 /* MenuDetailViewController.swift in Sources */,
 				848C641B20CAEF000012A287 /* ClassDetailViewController.swift in Sources */,
 				848C641D20CB07BD0012A287 /* AssignmentCell.swift in Sources */,

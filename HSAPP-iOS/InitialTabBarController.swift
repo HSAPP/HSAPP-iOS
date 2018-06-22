@@ -33,18 +33,18 @@ class InitialTabBarController: UITabBarController, UITabBarControllerDelegate {
         navOne.tabBarItem = tabOneBarItem
         
         // Create Tab two
-        let classesVC = ClassesViewController()
-        let navTwo = UINavigationController(rootViewController: classesVC)
+        let personalVC = PersonalViewController()
+        let navTwo = UINavigationController(rootViewController: personalVC)
         
-        let tabTwoBarItem = UITabBarItem(title: "Classrooms", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let tabTwoBarItem = UITabBarItem(title: "Personal", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
         navTwo.tabBarItem = tabTwoBarItem
         
         // Create Tab three
-        let clubsVC = ClubsViewController()
-        let navThree = UINavigationController(rootViewController: clubsVC)
-        
-        let tabThreeBarItem = UITabBarItem(title: "Clubs", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
-        navThree.tabBarItem = tabThreeBarItem
+//        let clubsVC = ClubsViewController()
+//        let navThree = UINavigationController(rootViewController: clubsVC)
+//
+//        let tabThreeBarItem = UITabBarItem(title: "Clubs", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+//        navThree.tabBarItem = tabThreeBarItem
         
         // Create Tab four
         let homeVC = SunnyHomeViewController()
@@ -53,7 +53,7 @@ class InitialTabBarController: UITabBarController, UITabBarControllerDelegate {
         let tabFourBarItem = UITabBarItem(title: "Home", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
         navFour.tabBarItem = tabFourBarItem
         
-        self.viewControllers = [navFour, navOne, navTwo, navThree]
+        self.viewControllers = [navFour, navOne, navTwo]
     }
 
 
