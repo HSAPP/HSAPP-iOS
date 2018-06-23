@@ -9,20 +9,17 @@
 import UIKit
 
 class AssignmentsTableCell: UITableViewCell {
+    
+    let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A", classroom: "French"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A", classroom: "French")]
 
     var assignmentsCollectionView: UICollectionView?
     let flowLayout = UICollectionViewFlowLayout()
     
     
-    
-    //we're going to pass in the datasource and delegate. So the delegate and datasource is going to come from our viewcontroller, not from our tableview cell
-    func setUp
-        <D: UICollectionViewDataSource & UICollectionViewDelegate>
-        (dataSourceDelegate: D, forRow row: Int) {
+    func setUp(forRow row: Int) {
         setUpCollectionView()
-        assignmentsCollectionView?.delegate = dataSourceDelegate
-        assignmentsCollectionView?.dataSource = dataSourceDelegate
-        assignmentsCollectionView?.tag = row
+        assignmentsCollectionView?.delegate = self
+        assignmentsCollectionView?.dataSource = self
         addConstraints()
         assignmentsCollectionView?.reloadData()
     }
@@ -49,4 +46,27 @@ class AssignmentsTableCell: UITableViewCell {
     }
     
 
+}
+
+extension AssignmentsTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        return CGSize(width: screenWidth * 0.8, height: 110)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return frenchAssignments.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AssignmentsCollectionCell", for: indexPath) as! AssignmentCollectionCell
+        cell.setUp(assignment: frenchAssignments[indexPath.row])
+        return cell
+    }
+    
+    
 }

@@ -11,19 +11,16 @@ import UIKit
 class MenuTableCell: UITableViewCell {
 
     
+    var menu = [FoodItem(title: "Hamburger", description: "Beef patty on two buns", price: "$5"), FoodItem(title: "Chicken Salad", description: "lettuce, tomato, egg and chicken strips", price: "$7"), FoodItem(title: "Vegan Patty Burger", description: "patty made from mushrooms, zucchini, and tofu", price: "$7")]
+    
     var menuCollectionView: UICollectionView?
     let flowLayout = UICollectionViewFlowLayout()
     
     
-    
-    //we're going to pass in the datasource and delegate. So the delegate and datasource is going to come from our viewcontroller, not from our tableview cell
-    func setUp
-        <D: UICollectionViewDataSource & UICollectionViewDelegate>
-        (dataSourceDelegate: D, forRow row: Int) {
+    func setUp(forRow row: Int) {
         setUpCollectionView()
-        menuCollectionView?.delegate = dataSourceDelegate
-        menuCollectionView?.dataSource = dataSourceDelegate
-        menuCollectionView?.tag = row
+        menuCollectionView?.delegate = self
+        menuCollectionView?.dataSource = self
         addConstraints()
         menuCollectionView?.reloadData()
     }
@@ -49,4 +46,25 @@ class MenuTableCell: UITableViewCell {
         
     }
 
+}
+
+extension MenuTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        return CGSize(width: screenWidth * 0.675, height: 110)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menu.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionCell", for: indexPath) as! MenuCollectionCell
+        cell.setUp(menuItem: menu[indexPath.row])
+        return cell
+    }
+    
+    
 }
