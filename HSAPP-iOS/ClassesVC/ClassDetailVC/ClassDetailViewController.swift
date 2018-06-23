@@ -24,7 +24,7 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         guard let classroom = self.classroom else {return}
         let cdHeaderFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 170)
-        let testingCells = [Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-"), Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-")]
+        let testingCells = [Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-", classroom: "French"), Assignment(title: "pg 200 - 205", dueDate: "Jan 27", score: "N/A", grade: "-", classroom: "French")]
         inProgress = testingCells
         classDetailHeader = CDView(frame: cdHeaderFrame, classroom: classroom)
         
