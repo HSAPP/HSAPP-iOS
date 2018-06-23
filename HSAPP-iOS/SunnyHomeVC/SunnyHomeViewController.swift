@@ -63,13 +63,13 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 1 {
+        if indexPath.section == 0 {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "MenuTableCell") as! MenuTableCell
             cell.setUp(dataSourceDelegate: self, forRow: indexPath.row)
             guard let collectionView = cell.menuCollectionView else {return cell}
             collectionViews.append(collectionView)
             return cell
-        } else if indexPath.section == 0 {
+        } else if indexPath.section == 1 {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "AssignmentsTableCell") as! AssignmentsTableCell
             cell.setUp(dataSourceDelegate: self, forRow: indexPath.row)
             guard let collectionView = cell.assignmentsCollectionView else {return cell}
@@ -87,11 +87,11 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 1 {
+        if section == 0 {
             let view = HeaderHelper.createTasksTitleHeaderView(title: "Featured Lunches:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.white, bottomOffset: -10)
             return view
-        } else if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.white, bottomOffset: -10)
+        } else if section == 1 {
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.white, bottomOffset: 25)
             return view
         }
         
@@ -108,9 +108,9 @@ extension SunnyHomeViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViews[0] {
-            return frenchAssignments.count
-        } else if collectionView == collectionViews[1] {
             return menu.count
+        } else if collectionView == collectionViews[1] {
+            return frenchAssignments.count
         }
         return 0
     }
@@ -118,16 +118,16 @@ extension SunnyHomeViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViews[0] {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AssignmentsCollectionCell", for: indexPath) as! AssignmentCollectionCell
-            cell.setUp(assignment: frenchAssignments[indexPath.row])
-            return cell
-            
-        } else if collectionView == collectionViews[1] {
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionCell", for: indexPath) as! MenuCollectionCell
             cell.setUp(menuItem: menu[indexPath.row])
             return cell
             
+            
+        } else if collectionView == collectionViews[1] {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AssignmentsCollectionCell", for: indexPath) as! AssignmentCollectionCell
+            cell.setUp(assignment: frenchAssignments[indexPath.row])
+            return cell
             
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AssignmentsCollectionCell", for: indexPath) as! AssignmentCollectionCell
@@ -137,6 +137,11 @@ extension SunnyHomeViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == collectionViews[0] {
+            return CGSize(width: self.view.bounds.width * 0.675, height: 110)
+        } else if collectionView == collectionViews[1] {
+            return CGSize(width: self.view.bounds.width * 0.8, height: 110)
+        }
         return CGSize(width: self.view.bounds.width * 0.9, height: 110)
     }
     
