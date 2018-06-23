@@ -10,6 +10,7 @@ import UIKit
 
 class AssignmentsTableCell: UITableViewCell {
     
+    
     let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A", classroom: "French"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A", classroom: "French")]
 
     var assignmentsCollectionView: UICollectionView?

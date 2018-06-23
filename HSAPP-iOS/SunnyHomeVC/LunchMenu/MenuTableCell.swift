@@ -53,7 +53,7 @@ extension MenuTableCell: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
-        return CGSize(width: screenWidth * 0.675, height: 110)
+        return CGSize(width: screenWidth * 0.9, height: 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

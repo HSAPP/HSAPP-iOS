@@ -12,9 +12,6 @@ import SnapKit
 class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    //MARK: VARIABLES
-    var announcements = [Any]()
-    
     //MARK: UICOMPONENTS
     
     var collectionViews = [UICollectionView]()
@@ -42,6 +39,7 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         homeTableView.dataSource = self
         homeTableView.register(MenuTableCell.self, forCellReuseIdentifier: "MenuTableCell")
         homeTableView.register(AssignmentsTableCell.self, forCellReuseIdentifier: "AssignmentsTableCell")
+        homeTableView.register(EventsTableCell.self, forCellReuseIdentifier: "DailyEventsTableCell")
         self.view.addSubview(homeTableView)
         
         homeTableView.snp.makeConstraints { (make) in
@@ -55,7 +53,7 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     //MARK: TABLEVIEW FUNCTIONS
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,14 +64,16 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.section == 0 {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "MenuTableCell") as! MenuTableCell
             cell.setUp(forRow: indexPath.row)
-            guard let collectionView = cell.menuCollectionView else {return cell}
-            collectionViews.append(collectionView)
+            
             return cell
         } else if indexPath.section == 1 {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "AssignmentsTableCell") as! AssignmentsTableCell
             cell.setUp(forRow: indexPath.row)
-            guard let collectionView = cell.assignmentsCollectionView else {return cell}
-            collectionViews.append(collectionView)
+            
+            return cell
+        } else if indexPath.section == 2 {
+            let cell = homeTableView.dequeueReusableCell(withIdentifier: "DailyEventsTableCell") as! EventsTableCell
+            cell.setUp(forRow: indexPath.row)
             return cell
         } else {
             let cell = homeTableView.dequeueReusableCell(withIdentifier: "MenuTableCell") as! MenuTableCell
@@ -88,10 +88,13 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Featured Lunches:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: -10, topOffset: 30)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Featured Lunches:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: 0, topOffset: 40)
             return view
         } else if section == 1 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: 25, topOffset: 10)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: 35, topOffset: 20)
+            return view
+        } else if section == 2 {
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Today's Events:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: 35, topOffset: -20)
             return view
         }
         

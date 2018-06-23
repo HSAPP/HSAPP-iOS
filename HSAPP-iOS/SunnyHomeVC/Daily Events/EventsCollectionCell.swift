@@ -1,19 +1,20 @@
 //
-//  AssignmentCollectionCell.swift
+//  EventsCollectionCell.swift
 //  HSAPP-iOS
 //
-//  Created by Sunny Ouyang on 6/22/18.
+//  Created by Sunny Ouyang on 6/23/18.
 //  Copyright © 2018 Tony Cioara. All rights reserved.
 //
 
 import UIKit
 
-class AssignmentCollectionCell: UICollectionViewCell {
+class EventsCollectionCell: UICollectionViewCell {
     
-    //MARK: VARIABLES
-    var assignment: Assignment?
+    var event: Event?
+    
     
     //MARK: UICOMPONENTS
+    
     private var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.AppColors.viewWhite
@@ -30,42 +31,29 @@ class AssignmentCollectionCell: UICollectionViewCell {
         return label
     }()
     
-    private var classLabel: UILabel = {
+    private var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: ".SFUIText-SemiBold", size: 14)
-        label.textColor = UIColor.gray
         return label
     }()
     
-    private var dueLabel: UILabel = {
+    private var locationLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: ".SFUIText-SemiBold", size: 16)
-        label.textColor = UIColor.lightGray
+        label.font = UIFont(name: ".SFUIText-SemiBold", size: 14)
         return label
     }()
     
-    func setUp(assignment: Assignment) {
-        addUIComponents()
-        setConstraints()
-        self.assignment = assignment
-        titleLabel.text = assignment.title
-        classLabel.text = assignment.classroom
-        dueLabel.text = "Today"
-        
-        
-    }
-    
-    private func addUIComponents() {
+    private func addUI() {
         self.contentView.addSubview(containerView)
-        [titleLabel, classLabel, dueLabel].forEach { (label) in
+        [titleLabel, dateLabel, locationLabel].forEach { (label) in
             containerView.addSubview(label)
         }
     }
     
-    private func setConstraints() {
+    private func setUpConstraints() {
         
         containerView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(-30)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview()
@@ -77,18 +65,27 @@ class AssignmentCollectionCell: UICollectionViewCell {
             make.right.equalToSuperview().offset(-16)
         }
         
-        classLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom)
+        dateLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel.snp.bottom).offset(16)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
         }
         
-        dueLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-16)
+        locationLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(dateLabel.snp.bottom).offset(16)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
         }
         
+    }
+    
+    func setUp(event: Event) {
+        self.event = event
+        titleLabel.text = event.title
+        dateLabel.text = event.date
+        locationLabel.text = event.place
+        addUI()
+        setUpConstraints()
     }
     
 }

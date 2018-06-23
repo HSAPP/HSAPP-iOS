@@ -70,7 +70,7 @@ class MenuCollectionCell: UICollectionViewCell {
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(foodImageView.snp.bottom).offset(16)
+            make.top.equalTo(foodImageView.snp.bottom).offset(20)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
         }
