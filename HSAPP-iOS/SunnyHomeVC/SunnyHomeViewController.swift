@@ -14,8 +14,7 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK: VARIABLES
     var announcements = [Any]()
-    var menu = [FoodItem(title: "Hamburger", description: "Beef patty on two buns", price: "$5"), FoodItem(title: "Chicken Salad", description: "lettuce, tomato, egg and chicken strips", price: "$7"), FoodItem(title: "Vegan Patty Burger", description: "patty made from mushrooms, zucchini, and tofu", price: "$7")]
-    let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A", classroom: "French"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A", classroom: "French")]
+    
     //MARK: UICOMPONENTS
     
     var collectionViews = [UICollectionView]()
@@ -38,6 +37,7 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func setUpTableView() {
+        homeTableView.backgroundColor = UIColor.AppColors.backgroundWhite
         homeTableView.delegate = self
         homeTableView.dataSource = self
         homeTableView.register(MenuTableCell.self, forCellReuseIdentifier: "MenuTableCell")
@@ -88,10 +88,10 @@ class SunnyHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Featured Lunches:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.white, bottomOffset: -10)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Featured Lunches:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: -10, topOffset: 30)
             return view
         } else if section == 1 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.white, bottomOffset: 25)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Assignments Due:", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 160), color: UIColor.AppColors.backgroundWhite, bottomOffset: 25, topOffset: 10)
             return view
         }
         

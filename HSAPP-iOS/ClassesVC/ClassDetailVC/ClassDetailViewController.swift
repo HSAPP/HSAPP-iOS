@@ -114,10 +114,10 @@ class ClassDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundWhite, bottomOffset: -10)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "In Progress", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundWhite, bottomOffset: -10, topOffset: 20)
             return view
         } else {
-            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundWhite, bottomOffset: -20)
+            let view = HeaderHelper.createTasksTitleHeaderView(title: "Completed", fontSize: 25, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150), color: UIColor.AppColors.backgroundWhite, bottomOffset: -5, topOffset: 20)
             return view
         }
     }
