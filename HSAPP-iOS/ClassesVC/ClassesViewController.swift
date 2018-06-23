@@ -11,7 +11,7 @@ import SnapKit
 
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A"), Assignment(title: "pg 125-127", dueDate: "Mon, June 4", score: "94/100", grade: "A"), Assignment(title: "pg 135-137", dueDate: "Tue, May 27", score: "94/100", grade: "A"), Assignment(title: "pg 140-147", dueDate: "Tue, May 27", score: "94/100", grade: "A")]
+    let frenchAssignments = [Assignment(title: "pg 105-107", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 109-111", dueDate: "Wed, May 28", score: "95/100", grade: "A", classroom: "French"), Assignment(title: "pg 115-127", dueDate: "Fri, May 29", score: "93/100", grade: "A", classroom: "French"), Assignment(title: "pg 125-127", dueDate: "Mon, June 4", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 135-137", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French"), Assignment(title: "pg 140-147", dueDate: "Tue, May 27", score: "94/100", grade: "A", classroom: "French")]
 
     let classesTableView = UITableView()
     var classrooms: [Classroom]?

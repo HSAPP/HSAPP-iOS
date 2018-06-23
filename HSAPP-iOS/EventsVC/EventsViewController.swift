@@ -49,9 +49,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if eventArray[indexPath.row].price == nil {
-            return 175
+            return 195
         } else {
-            return 210
+            return 230
         }
     }
     
